@@ -54,7 +54,7 @@ export default function CourseCatalog() {
       <StudentLayout>
         <div className="flex items-center justify-center h-96">
           <div className="text-center">
-            <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-blue-600 mx-auto mb-4"></div>
+            <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-purple-600 mx-auto mb-4"></div>
             <p className="text-gray-600">Discovering amazing courses...</p>
           </div>
         </div>
@@ -87,7 +87,7 @@ export default function CourseCatalog() {
             className="group bg-white/80 backdrop-blur-sm rounded-3xl shadow-lg border border-gray-200/60 overflow-hidden hover:shadow-2xl hover:scale-105 transition-all duration-500"
           >
             {/* Course Image/Thumbnail */}
-            <div className="h-48 bg-gradient-to-br from-blue-500/20 to-purple-600/20 relative overflow-hidden">
+            <div className="h-48 bg-gradient-to-br from-purple-500/20 to-glowPurple/20 relative overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
               <div className="absolute bottom-4 left-4 right-4">
                 <h3 className="text-xl font-bold text-white drop-shadow-lg">
@@ -129,7 +129,7 @@ export default function CourseCatalog() {
                 <button
                   onClick={() => enrollCourse(course.id)}
                   disabled={enrolling === course.id}
-                  className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-4 rounded-xl hover:shadow-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed group/enroll"
+                  className="flex-1 bg-gradient-to-r from-purple-600 to-glowPurple text-white py-3 px-4 rounded-xl hover:shadow-glow-purple transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed group/enroll"
                 >
                   {enrolling === course.id ? (
                     <div className="flex items-center justify-center gap-2">
@@ -155,7 +155,7 @@ export default function CourseCatalog() {
             </div>
 
             {/* Hover Effect Border */}
-            <div className="absolute inset-0 border-2 border-transparent group-hover:border-blue-200 rounded-3xl transition-all duration-500 pointer-events-none"></div>
+            <div className="absolute inset-0 border-2 border-transparent group-hover:border-purple-200 rounded-3xl transition-all duration-500 pointer-events-none"></div>
           </div>
         ))}
       </div>
@@ -163,7 +163,7 @@ export default function CourseCatalog() {
       {/* Empty State */}
       {courses.length === 0 && !loading && (
         <div className="text-center py-20">
-          <div className="w-32 h-32 bg-gradient-to-br from-blue-100 to-purple-100 rounded-3xl flex items-center justify-center mx-auto mb-8">
+          <div className="w-32 h-32 bg-gradient-to-br from-purple-100 to-glowPurple/30 rounded-3xl flex items-center justify-center mx-auto mb-8">
             <span className="text-6xl">🎓</span>
           </div>
           <h3 className="text-3xl font-bold text-gray-900 mb-4">

@@ -44,7 +44,7 @@ export default function Dashboard() {
   }, []);
 
   // Enhanced Progress Circle with Animation
-  const ProgressCircle = ({ percentage, size = 100, color = "blue" }) => {
+  const ProgressCircle = ({ percentage, size = 100, color = "purple" }) => {
     const strokeWidth = 8;
     const radius = (size - strokeWidth) / 2;
     const circumference = radius * 2 * Math.PI;
@@ -52,11 +52,12 @@ export default function Dashboard() {
     const strokeDashoffset = circumference - (percentage / 100) * circumference;
 
     const colorClasses = {
-      blue: "from-blue-500 to-cyan-500",
+      purple: "from-purple-500 to-fuchsia-500",
       green: "from-green-500 to-emerald-500",
-      purple: "from-purple-500 to-pink-500",
+      pink: "from-purple-500 to-pink-500",
       orange: "from-orange-500 to-red-500",
     };
+
 
     return (
       <div className="relative" style={{ width: size, height: size }}>
@@ -108,7 +109,7 @@ export default function Dashboard() {
       <StudentLayout>
         <div className="flex items-center justify-center h-96">
           <div className="text-center">
-            <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-blue-600 mx-auto mb-4"></div>
+            <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-purple-600 mx-auto mb-4"></div>
             <p className="text-gray-600">Loading your dashboard...</p>
           </div>
         </div>
@@ -151,7 +152,7 @@ export default function Dashboard() {
 
       {/* Enhanced Stats Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 mb-8">
-        <div className="group bg-white/80 backdrop-blur-sm rounded-3xl shadow-lg border border-gray-200/60 p-6 hover:shadow-2xl hover:scale-105 transition-all duration-500 hover:border-blue-200">
+        <div className="group bg-white/80 backdrop-blur-sm rounded-3xl shadow-lg border border-gray-200/60 p-6 hover:shadow-2xl hover:scale-105 transition-all duration-500 hover:border-purple-200">
           <div className="flex items-center justify-between">
             <div>
               <p className="text-sm font-semibold text-gray-500 uppercase tracking-wide">
@@ -162,7 +163,7 @@ export default function Dashboard() {
               </h3>
               <p className="text-xs text-gray-500 mt-1">Active learning</p>
             </div>
-            <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-shadow">
+            <div className="w-14 h-14 bg-gradient-to-br from-purple-600 to-glowPurple rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-shadow">
               <span className="text-2xl text-white">📚</span>
             </div>
           </div>
@@ -232,7 +233,7 @@ export default function Dashboard() {
           </div>
           <Link
             to="/student/learning"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-2xl hover:shadow-lg transition-all duration-300 hover:scale-105 mt-4 lg:mt-0"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-600 to-glowPurple text-white rounded-2xl hover:shadow-glow-purple transition-all duration-300 hover:scale-105 mt-4 lg:mt-0"
           >
             <span>View All Courses</span>
             <span className="text-lg">→</span>
@@ -244,9 +245,9 @@ export default function Dashboard() {
             {recentCourses.map((course, index) => (
               <div
                 key={course.id}
-                className="group bg-gradient-to-br from-white to-gray-50 rounded-2xl shadow-lg border border-gray-200/60 p-6 hover:shadow-2xl hover:scale-105 transition-all duration-500 hover:border-blue-200"
+                className="group bg-gradient-to-br from-white to-gray-50 rounded-2xl shadow-lg border border-gray-200/60 p-6 hover:shadow-2xl hover:scale-105 transition-all duration-500 hover:border-purple-200"
               >
-                <div className="w-full h-32 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-xl mb-4 flex items-center justify-center group-hover:from-blue-500/30 group-hover:to-purple-500/30 transition-all duration-500">
+                <div className="w-full h-32 bg-gradient-to-br from-purple-500/20 to-glowPurple/20 rounded-xl mb-4 flex items-center justify-center group-hover:from-purple-500/30 group-hover:to-glowPurple/30 transition-all duration-500">
                   {course.coverImageUrl ? (
                     <img
                       src={course.coverImageUrl}
@@ -264,7 +265,7 @@ export default function Dashboard() {
                   <h3 className="font-bold text-gray-900 text-lg leading-tight">
                     {course.title}
                   </h3>
-                  <span className="text-sm font-semibold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                  <span className="text-sm font-semibold bg-gradient-to-r from-purple-600 to-glowPurple bg-clip-text text-transparent">
                     {course.progress || 0}%
                   </span>
                 </div>
@@ -275,14 +276,14 @@ export default function Dashboard() {
 
                 <div className="w-full bg-gray-200 rounded-full h-2 mb-4">
                   <div
-                    className="bg-gradient-to-r from-blue-500 to-purple-500 h-2 rounded-full transition-all duration-1000 ease-out"
+                    className="bg-gradient-to-r from-purple-600 to-glowPurple h-2 rounded-full transition-all duration-1000 ease-out"
                     style={{ width: `${course.progress || 0}%` }}
                   ></div>
                 </div>
 
                 <Link
                   to={`/student/course/${course.id}`}
-                  className="w-full inline-flex items-center justify-center gap-2 bg-gray-900 text-white py-3 px-4 rounded-xl hover:shadow-lg transition-all duration-300 hover:scale-105 group/btn"
+                  className="w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-purple-600 to-glowPurple text-white py-3 px-4 rounded-xl hover:shadow-glow-purple transition-all duration-300 hover:scale-105 group/btn"
                 >
                   <span>Continue Learning</span>
                   <span className="group-hover/btn:translate-x-1 transition-transform">
@@ -294,7 +295,7 @@ export default function Dashboard() {
           </div>
         ) : (
           <div className="text-center py-12">
-            <div className="w-24 h-24 bg-gradient-to-br from-blue-100 to-purple-100 rounded-3xl flex items-center justify-center mx-auto mb-6">
+            <div className="w-24 h-24 bg-gradient-to-br from-purple-100 to-glowPurple/30 rounded-3xl flex items-center justify-center mx-auto mb-6">
               <span className="text-4xl">🎯</span>
             </div>
             <h3 className="text-2xl font-bold text-gray-900 mb-3">
@@ -305,7 +306,7 @@ export default function Dashboard() {
             </p>
             <Link
               to="/courses"
-              className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 px-8 rounded-2xl hover:shadow-xl transition-all duration-300 hover:scale-105"
+              className="inline-flex items-center gap-3 bg-gradient-to-r from-purple-600 to-glowPurple text-white py-4 px-8 rounded-2xl hover:shadow-glow-purple transition-all duration-300 hover:scale-105"
             >
               <span>Browse Courses</span>
               <span className="text-lg">✨</span>
@@ -316,12 +317,12 @@ export default function Dashboard() {
 
       {/* Quick Actions Section */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-6 border border-blue-200/60">
+        <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-6 border border-purple-200/60">
           <h3 className="font-semibold text-gray-900 mb-2">Need Help?</h3>
           <p className="text-gray-600 text-sm mb-4">
             Get support for your learning journey
           </p>
-          <button className="text-blue-600 hover:text-blue-700 font-medium text-sm">
+          <button className="text-purple-600 hover:text-purple-700 font-medium text-sm">
             Contact Support →
           </button>
         </div>

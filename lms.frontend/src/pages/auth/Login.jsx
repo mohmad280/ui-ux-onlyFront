@@ -76,7 +76,7 @@ export default function Login() {
         title: "Student Login",
         description: "Access your courses and continue learning",
         icon: "🎓",
-        gradient: "from-blue-500 to-cyan-500",
+        gradient: "from-purple-500 to-glowPurple",
         testEmail: "rohit@lms.com",
         testPassword: "rohit",
       },
@@ -103,10 +103,10 @@ export default function Login() {
   const currentRole = getRoleDetails(selectedRole);
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-blue-50 p-4">
+    <div className="min-h-screen flex items-center justify-center glow-bg p-4">
       {/* Background Decorations */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-pulse"></div>
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-pulse"></div>
         <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-pulse animation-delay-2000"></div>
         <div className="absolute top-40 left-1/2 w-80 h-80 bg-cyan-200 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-pulse animation-delay-4000"></div>
       </div>
@@ -117,7 +117,7 @@ export default function Login() {
         <div className="bg-white rounded-3xl shadow-2xl overflow-hidden transform hover:scale-[1.01] transition-all duration-300">
           <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[600px]">
             {/* Left Column - Role Selection */}
-            <div className="bg-gradient-to-br from-blue-600 to-purple-700 p-8 text-white">
+            <div className="bg-gradient-to-br from-purple-600 to-glowPurple p-8 text-white">
               <div className="flex flex-col h-full">
                 {/* Header */}
                 <div className="text-center mb-8">
@@ -129,7 +129,7 @@ export default function Login() {
                       LearnPro
                     </span>
                   </Link>
-                  <p className="text-blue-100 mt-3">
+                  <p className="text-purple-100 mt-3">
                     Choose your role to continue
                   </p>
                 </div>
@@ -162,14 +162,14 @@ export default function Login() {
                             <h3 className="font-semibold text-lg">
                               {roleInfo.title}
                             </h3>
-                            <p className="text-blue-100 text-sm mt-1">
+                            <p className="text-purple-100 text-sm mt-1">
                               {roleInfo.description}
                             </p>
                           </div>
                           {isSelected && (
                             <div className="ml-auto">
                               <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center">
-                                <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                                <div className="w-2 h-2 bg-purple-600 rounded-full"></div>
                               </div>
                             </div>
                           )}
@@ -181,11 +181,11 @@ export default function Login() {
 
                 {/* Sign Up Link */}
                 <div className="text-center mt-8 pt-6 border-t border-white/20">
-                  <p className="text-blue-100">
+                  <p className="text-purple-100">
                     Don't have an account?{" "}
                     <Link
                       to="/signup"
-                      className="font-semibold text-white hover:text-blue-200 transition-colors duration-200 underline"
+                      className="font-semibold text-white hover:text-purple-200 transition-colors duration-200 underline"
                     >
                       Sign up here
                     </Link>
@@ -260,7 +260,7 @@ export default function Login() {
                         value={credentials.email}
                         onChange={handleChange}
                         required
-                        className="block w-full pl-10 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 bg-white/50"
+                        className="block w-full pl-10 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all duration-200 bg-white/50"
                         placeholder="Enter your email"
                       />
                     </div>
@@ -275,7 +275,7 @@ export default function Login() {
                       <button
                         type="button"
                         onClick={() => setShowPassword(!showPassword)}
-                        className="text-sm text-blue-600 hover:text-blue-500 font-medium transition-colors duration-200"
+                        className="text-sm text-purple-600 hover:text-purple-500 font-medium transition-colors duration-200"
                       >
                         {showPassword ? "Hide" : "Show"}
                       </button>
@@ -302,7 +302,7 @@ export default function Login() {
                         value={credentials.password}
                         onChange={handleChange}
                         required
-                        className="block w-full pl-10 pr-12 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 bg-white/50"
+                        className="block w-full pl-10 pr-12 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all duration-200 bg-white/50"
                         placeholder="Enter your password"
                       />
                     </div>
@@ -313,7 +313,7 @@ export default function Login() {
                     <label className="flex items-center">
                       <input
                         type="checkbox"
-                        className="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+                        className="w-4 h-4 text-purple-600 border-gray-300 rounded focus:ring-purple-500"
                       />
                       <span className="ml-2 text-sm text-gray-600">
                         Remember me
@@ -322,7 +322,7 @@ export default function Login() {
 
                     <Link
                       to="/forgot-password"
-                      className="text-sm text-blue-600 hover:text-blue-500 font-medium transition-colors duration-200"
+                      className="text-sm text-purple-600 hover:text-purple-500 font-medium transition-colors duration-200"
                     >
                       Forgot password?
                     </Link>
@@ -394,11 +394,11 @@ export default function Login() {
         <div className="text-center mt-8">
           <p className="text-xs text-gray-500">
             By signing in, you agree to our{" "}
-            <Link to="/terms" className="text-blue-600 hover:text-blue-500">
+            <Link to="/terms" className="text-purple-600 hover:text-purple-500">
               Terms
             </Link>{" "}
             and{" "}
-            <Link to="/privacy" className="text-blue-600 hover:text-blue-500">
+            <Link to="/privacy" className="text-purple-600 hover:text-purple-500">
               Privacy Policy
             </Link>
           </p>

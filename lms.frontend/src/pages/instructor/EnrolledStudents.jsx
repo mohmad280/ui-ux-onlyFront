@@ -187,7 +187,7 @@ export default function EnrolledStudents() {
                             student.progress === 100
                               ? "bg-green-100 text-green-800"
                               : student.progress > 0
-                              ? "bg-blue-100 text-blue-800"
+                              ? "bg-purple-100 text-purple-800"
                               : "bg-gray-100 text-gray-800"
                           }`}
                         >

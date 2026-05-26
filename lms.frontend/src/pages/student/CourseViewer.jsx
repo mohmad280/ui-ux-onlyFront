@@ -87,7 +87,7 @@ export default function CourseViewer() {
               href={mediaUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center text-blue-600 hover:text-blue-800 text-sm"
+              className="inline-flex items-center text-purple-600 hover:text-purple-800 text-sm"
             >
               <span>Open image in new tab</span>
               <svg
@@ -130,7 +130,7 @@ export default function CourseViewer() {
               href={mediaUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center text-blue-600 hover:text-blue-800 text-sm"
+              className="inline-flex items-center text-purple-600 hover:text-purple-800 text-sm"
             >
               <span>Download video</span>
               <svg
@@ -177,7 +177,7 @@ export default function CourseViewer() {
               href={mediaUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium"
+              className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-600 to-glowPurple text-white rounded-lg hover:shadow-glow-purple transition-all duration-300 font-medium"
             >
               <span>Open PDF Document</span>
               <svg
@@ -224,7 +224,7 @@ export default function CourseViewer() {
               href={mediaUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium"
+              className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-600 to-glowPurple text-white rounded-lg hover:shadow-glow-purple transition-all duration-300 font-medium"
             >
               <span>Download File</span>
               <svg
@@ -252,7 +252,7 @@ export default function CourseViewer() {
       <StudentLayout>
         <div className="flex items-center justify-center h-96">
           <div className="text-center">
-            <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-blue-600 mx-auto mb-4"></div>
+            <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-purple-600 mx-auto mb-4"></div>
             <p className="text-gray-600">Loading course content...</p>
           </div>
         </div>
@@ -284,7 +284,7 @@ export default function CourseViewer() {
     <StudentLayout>
       <div className="max-w-7xl mx-auto">
         {/* Course Header */}
-        <div className="bg-gradient-to-r from-blue-600/10 to-purple-600/10 rounded-3xl p-8 mb-8 border border-blue-200/60">
+        <div className="bg-gradient-to-r from-purple-600/10 to-glowPurple/10 rounded-3xl p-8 mb-8 border border-purple-200/60">
           <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6">
             <div className="flex-1">
               <div className="inline-flex items-center gap-2 px-3 py-1 bg-white/80 rounded-full text-sm text-gray-600 mb-4">
@@ -301,8 +301,8 @@ export default function CourseViewer() {
               {/* Progress Stats */}
               <div className="flex flex-wrap gap-6">
                 <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 bg-blue-100 rounded-2xl flex items-center justify-center">
-                    <span className="text-blue-600 font-bold">
+                  <div className="w-12 h-12 bg-purple-100 rounded-2xl flex items-center justify-center">
+                    <span className="text-purple-600 font-bold">
                       {completedCount}
                     </span>
                   </div>
@@ -409,7 +409,7 @@ export default function CourseViewer() {
                       onClick={() => setActiveLesson(lesson)}
                       className={`w-full text-left p-3 rounded-xl transition-all duration-300 group ${
                         isActive
-                          ? "bg-blue-50 border border-blue-200 shadow-sm"
+                          ? "bg-purple-50 border border-purple-200 shadow-sm"
                           : "hover:bg-gray-50 border border-transparent"
                       }`}
                     >
@@ -419,7 +419,7 @@ export default function CourseViewer() {
                             isCompleted
                               ? "bg-green-500 text-white"
                               : isActive
-                              ? "bg-blue-500 text-white"
+                              ? "bg-purple-600 text-white"
                               : "bg-gray-100 text-gray-600 group-hover:bg-gray-200"
                           }`}
                         >
@@ -428,7 +428,7 @@ export default function CourseViewer() {
                         <div className="flex-1 min-w-0">
                           <p
                             className={`font-medium text-sm truncate ${
-                              isActive ? "text-blue-700" : "text-gray-700"
+                              isActive ? "text-purple-700" : "text-gray-700"
                             }`}
                           >
                             {lesson.title}
@@ -456,7 +456,7 @@ export default function CourseViewer() {
                 </div>
                 <div className="w-full bg-gray-200 rounded-full h-2">
                   <div
-                    className="bg-gradient-to-r from-blue-500 to-purple-500 h-2 rounded-full transition-all duration-1000"
+                    className="bg-gradient-to-r from-purple-600 to-glowPurple h-2 rounded-full transition-all duration-1000"
                     style={{
                       width: `${(completedCount / totalLessons) * 100}%`,
                     }}
@@ -471,7 +471,7 @@ export default function CourseViewer() {
             {activeLesson ? (
               <div className="bg-white/80 backdrop-blur-sm rounded-3xl shadow-lg border border-gray-200/60 overflow-hidden">
                 {/* Lesson Header */}
-                <div className="bg-gradient-to-r from-gray-50 to-blue-50/50 p-6 border-b border-gray-200/60">
+                <div className="bg-gradient-to-r from-gray-50 to-purple-50/50 p-6 border-b border-gray-200/60">
                   <div className="flex items-center gap-3 mb-2">
                     <span className="text-2xl">📖</span>
                     <div>
@@ -546,7 +546,7 @@ export default function CourseViewer() {
                         completedLessonIds.includes(activeLesson.id) ||
                         completing === activeLesson.id
                       }
-                      className="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl hover:shadow-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed min-w-48 group/complete"
+                      className="px-8 py-3 bg-gradient-to-r from-purple-600 to-glowPurple text-white rounded-xl hover:shadow-glow-purple transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed min-w-48 group/complete"
                     >
                       {completing === activeLesson.id ? (
                         <div className="flex items-center justify-center gap-2">

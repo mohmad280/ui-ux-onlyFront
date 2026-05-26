@@ -68,7 +68,7 @@ export default function StudentLessonView() {
               href={fileUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-600 hover:text-blue-800 text-sm"
+              className="text-purple-600 hover:text-purple-800 text-sm"
             >
               Open image in new tab
             </a>
@@ -97,7 +97,7 @@ export default function StudentLessonView() {
               href={fileUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-600 hover:text-blue-800 text-sm"
+              className="text-purple-600 hover:text-purple-800 text-sm"
             >
               Download video
             </a>
@@ -132,7 +132,7 @@ export default function StudentLessonView() {
                 href={fileUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium"
+                className="inline-flex items-center text-purple-600 hover:text-purple-800 font-medium"
               >
                 <span>Open PDF Document</span>
                 <svg
@@ -181,7 +181,7 @@ export default function StudentLessonView() {
                 href={fileUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium"
+                className="inline-flex items-center text-purple-600 hover:text-purple-800 font-medium"
               >
                 <span>Download File</span>
                 <svg

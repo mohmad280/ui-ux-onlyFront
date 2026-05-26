@@ -161,7 +161,7 @@ export default function InstructorDashboard() {
           </div>
           <Link
             to="/instructor/courses/new"
-            className="mt-4 sm:mt-0 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors shadow-sm hover:shadow-md flex items-center gap-2"
+            className="mt-4 sm:mt-0 bg-gradient-to-r from-purple-600 to-glowPurple hover:shadow-glow-purple text-white px-6 py-3 rounded-lg font-medium transition-all shadow-sm hover:shadow-md flex items-center gap-2"
           >
             <svg
               className="w-5 h-5"
@@ -202,9 +202,9 @@ export default function InstructorDashboard() {
                   </span>
                 </div>
               </div>
-              <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
+              <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center">
                 <svg
-                  className="w-6 h-6 text-blue-600"
+                  className="w-6 h-6 text-purple-600"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -353,7 +353,7 @@ export default function InstructorDashboard() {
               </p>
               <Link
                 to="/instructor/courses/new"
-                className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors"
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-glowPurple hover:shadow-glow-purple text-white px-6 py-3 rounded-lg font-medium transition-all"
               >
                 <svg
                   className="w-5 h-5"
@@ -384,7 +384,7 @@ export default function InstructorDashboard() {
                       <img
                         src={
                           course.coverImageUrl ||
-                          `https://via.placeholder.com/300x200/3B82F6/FFFFFF?text=${encodeURIComponent(
+                          `https://via.placeholder.com/300x200/8B5CF6/FFFFFF?text=${encodeURIComponent(
                             course.title || "Course"
                           )}`
                         }
@@ -453,7 +453,7 @@ export default function InstructorDashboard() {
                         </Link>
                         <Link
                           to={`/instructor/courses/${course.id}/lessons/new`}
-                          className="flex-1 bg-blue-600 hover:bg-blue-700 text-white py-2 px-3 rounded text-sm font-medium transition-colors text-center"
+                          className="flex-1 bg-gradient-to-r from-purple-600 to-glowPurple hover:shadow-glow-purple text-white py-2 px-3 rounded text-sm font-medium transition-all text-center"
                         >
                           Add Lessons
                         </Link>

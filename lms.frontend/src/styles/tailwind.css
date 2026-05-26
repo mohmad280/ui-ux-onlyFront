@@ -5,7 +5,7 @@
 
 /* Custom reusable classes */
 .btn-primary {
-  @apply bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition;
+  @apply bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition;
 }
 
 .btn-secondary {
@@ -17,5 +17,32 @@
 }
 
 .input {
-  @apply border border-gray-300 rounded-md px-3 py-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500;
+  @apply border border-gray-300 rounded-md px-3 py-2 w-full focus:outline-none focus:ring-2 focus:ring-purple-500;
+}
+
+/* Glowing purple theme utilities */
+.glow-btn {
+  @apply bg-glowPurple text-white px-4 py-2 rounded-lg transition transform hover:-translate-y-0.5;
+  box-shadow: 0 6px 20px rgba(139,92,246,0.12);
+}
+
+.glow-btn:hover {
+  box-shadow: 0 10px 40px rgba(139,92,246,0.22), 0 4px 10px rgba(139,92,246,0.08);
+}
+
+.glow-card {
+  @apply bg-white rounded-2xl border border-transparent transition-all duration-300 transform;
+  box-shadow: 0 6px 20px rgba(139,92,246,0.06);
+}
+
+.glow-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 50px rgba(139,92,246,0.18), 0 6px 18px rgba(139,92,246,0.08);
+  border-color: rgba(139,92,246,0.12);
+}
+
+.glow-link:hover {
+  text-decoration: none;
+  text-shadow: 0 0 10px rgba(139,92,246,0.18);
+  color: #6d28d9;
 }

@@ -43,7 +43,7 @@ export default function CourseCard({
       Beginner: "bg-green-100 text-green-800",
       Intermediate: "bg-yellow-100 text-yellow-800",
       Advanced: "bg-red-100 text-red-800",
-      "All Levels": "bg-blue-100 text-blue-800",
+      "All Levels": "bg-purple-100 text-purple-800",
     };
     return levels[level] || levels["Beginner"];
   };
@@ -100,7 +100,7 @@ export default function CourseCard({
   };
 
   return (
-    <div className="group bg-white rounded-2xl shadow-sm hover:shadow-xl border border-gray-200 overflow-hidden transition-all duration-300 transform hover:-translate-y-2">
+    <div className="glow-card group overflow-hidden">
       {/* Course Thumbnail */}
       <div className="relative overflow-hidden bg-gray-100">
         {thumbnail && !imageError ? (
@@ -123,24 +123,22 @@ export default function CourseCard({
         ) : (
           <div className="w-full h-48 flex items-center justify-center bg-gradient-to-br from-indigo-50 to-purple-100">
             <div className="text-center">
-              <div className="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-2">
-                <svg
-                  className="w-6 h-6 text-indigo-500"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
-                  />
-                </svg>
-              </div>
-              <span className="text-sm text-gray-500 font-medium">
-                Course Image
-              </span>
+                <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-2 shadow-sm">
+                  <svg
+                    className="w-6 h-6 text-purple-500"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+                    />
+                  </svg>
+                </div>
+                <span className="text-sm text-gray-500 font-medium">Course Image</span>
             </div>
           </div>
         )}
@@ -168,8 +166,8 @@ export default function CourseCard({
       {/* Course Content */}
       <div className="p-5">
         {/* Course Category */}
-        <div className="flex items-center justify-between mb-3">
-          <span className="text-xs font-medium text-indigo-600 bg-indigo-50 px-2 py-1 rounded-full">
+          <div className="flex items-center justify-between mb-3">
+          <span className="text-xs font-medium text-purple-700 bg-purple-50 px-2 py-1 rounded-full">
             {category}
           </span>
           <div className="flex items-center gap-1 text-xs text-gray-500">
@@ -179,7 +177,7 @@ export default function CourseCard({
         </div>
 
         {/* Course Title */}
-        <h3 className="font-bold text-lg text-gray-900 mb-2 line-clamp-2 group-hover:text-indigo-600 transition-colors duration-200">
+        <h3 className="font-bold text-lg text-gray-900 mb-2 line-clamp-2 group-hover:text-purple-700 transition-colors duration-200">
           {title}
         </h3>
 
@@ -250,7 +248,7 @@ export default function CourseCard({
           <div className="flex items-center gap-2">
             <button
               onClick={() => onView(id)}
-              className="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 hover:border-gray-400 transition-all duration-200 transform hover:scale-105 flex items-center gap-2"
+              className="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-white/80 hover:border-purple-200 transition-all duration-200 transform hover:scale-105 flex items-center gap-2"
             >
               <svg
                 className="w-4 h-4"
@@ -303,7 +301,7 @@ export default function CourseCard({
             ) : (
               <button
                 onClick={() => onEnroll(id)}
-                className="px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-indigo-500 to-purple-600 rounded-lg hover:shadow-lg hover:shadow-indigo-200 transition-all duration-200 transform hover:scale-105 flex items-center gap-2"
+                className="px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-purple-600 to-glowPurple rounded-lg hover:shadow-glow-purple transition-all duration-200 transform hover:scale-105 flex items-center gap-2"
               >
                 <svg
                   className="w-4 h-4"

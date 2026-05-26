@@ -91,7 +91,7 @@ export default function AdminDashboard() {
       <AdminLayout>
         <div className="flex items-center justify-center min-h-64">
           <div className="text-center">
-            <div className="w-12 h-12 border-4 border-blue-600 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+            <div className="w-12 h-12 border-4 border-purple-600 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
             <p className="text-gray-600">Loading dashboard...</p>
           </div>
         </div>
@@ -114,7 +114,7 @@ export default function AdminDashboard() {
           </div>
           <button
             onClick={() => setShowAddUser(true)}
-            className="mt-4 sm:mt-0 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors shadow-sm hover:shadow-md flex items-center gap-2"
+            className="mt-4 sm:mt-0 bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-medium transition-colors shadow-sm hover:shadow-md flex items-center gap-2"
           >
             <svg
               className="w-5 h-5"
@@ -144,9 +144,9 @@ export default function AdminDashboard() {
                   {stats.totalUsers.toLocaleString()}
                 </p>
               </div>
-              <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
+                <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center">
                 <svg
-                  className="w-6 h-6 text-blue-600"
+                  className="w-6 h-6 text-purple-600"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -274,11 +274,11 @@ export default function AdminDashboard() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <button
                 onClick={() => navigate("/admin/users")}
-                className="p-4 text-left border border-gray-200 rounded-lg hover:border-blue-500 hover:bg-blue-50 transition-all duration-200"
+                className="p-4 text-left border border-gray-200 rounded-lg hover:border-purple-500 hover:bg-purple-50 transition-all duration-200"
               >
-                <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mb-3">
+                  <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center mb-3">
                   <svg
-                    className="w-5 h-5 text-blue-600"
+                    className="w-5 h-5 text-purple-600"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -374,7 +374,7 @@ export default function AdminDashboard() {
               <h3 className="text-lg font-semibold text-gray-900">
                 Recent Activity
               </h3>
-              <button className="text-sm text-blue-600 hover:text-blue-700 font-medium">
+              <button className="text-sm text-purple-600 hover:text-purple-700 font-medium">
                 View All
               </button>
             </div>
@@ -386,9 +386,9 @@ export default function AdminDashboard() {
                     key={index}
                     className="flex items-start gap-4 p-3 rounded-lg hover:bg-gray-50 transition-colors duration-200"
                   >
-                    <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mt-1">
+                    <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center mt-1">
                       <svg
-                        className="w-4 h-4 text-blue-600"
+                        className="w-4 h-4 text-purple-600"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -451,7 +451,7 @@ export default function AdminDashboard() {
                     onChange={(e) =>
                       setNewUser({ ...newUser, username: e.target.value })
                     }
-                    className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
                   />
                 </div>
 
@@ -466,7 +466,7 @@ export default function AdminDashboard() {
                     onChange={(e) =>
                       setNewUser({ ...newUser, email: e.target.value })
                     }
-                    className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
                   />
                 </div>
 
@@ -481,7 +481,7 @@ export default function AdminDashboard() {
                     onChange={(e) =>
                       setNewUser({ ...newUser, password: e.target.value })
                     }
-                    className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
                   />
                 </div>
 
@@ -494,7 +494,7 @@ export default function AdminDashboard() {
                     onChange={(e) =>
                       setNewUser({ ...newUser, role: e.target.value })
                     }
-                    className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
                   >
                     <option value="ROLE_STUDENT">Student</option>
                     <option value="ROLE_INSTRUCTOR">Instructor</option>
@@ -506,7 +506,7 @@ export default function AdminDashboard() {
               <div className="flex gap-3 mt-6">
                 <button
                   onClick={handleAddUser}
-                  className="flex-1 bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-medium transition-colors"
+                  className="flex-1 bg-purple-600 hover:bg-purple-700 text-white py-3 rounded-lg font-medium transition-colors"
                 >
                   Add User
                 </button>

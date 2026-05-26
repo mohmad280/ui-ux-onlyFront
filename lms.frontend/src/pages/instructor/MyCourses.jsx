@@ -51,7 +51,7 @@ export default function MyCourses() {
           </div>
           <Link
             to="/instructor/courses/new"
-            className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors"
+            className="bg-gradient-to-r from-purple-600 to-glowPurple hover:shadow-glow-purple text-white px-6 py-3 rounded-lg font-medium transition-all"
           >
             Create New Course
           </Link>
@@ -68,7 +68,7 @@ export default function MyCourses() {
             </p>
             <Link
               to="/instructor/courses/new"
-              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium"
+              className="bg-gradient-to-r from-purple-600 to-glowPurple hover:shadow-glow-purple text-white px-6 py-3 rounded-lg font-medium"
             >
               Create Your First Course
             </Link>
@@ -91,7 +91,7 @@ export default function MyCourses() {
                   </span>
                   <Link
                     to={`/instructor/courses/${course.id}`}
-                    className="text-blue-600 hover:text-blue-800 text-sm font-medium"
+                    className="text-purple-600 hover:text-purple-900 text-sm font-medium"
                   >
                     Manage →
                   </Link>

@@ -326,50 +326,66 @@ export default function Home() {
       <Navbar />
 
       {/* Enhanced Hero Section */}
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-50 via-white to-indigo-50">
-        <div className="max-w-7xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium mb-6">
-            <span>🎯</span>
-            <span>Learn from industry experts</span>
+      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 glow-bg">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+          <div className="text-left">
+            <div className="inline-flex items-center gap-2 bg-purple-50 text-purple-800 px-4 py-2 rounded-full text-sm font-medium mb-6">
+              <span>🎯</span>
+              <span>Learn from industry experts</span>
+            </div>
+
+            <h1 className="text-4xl sm:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+              Advance Your Career With
+              <span className="text-purple-700 block bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-glowPurple">
+                Expert-Led Courses
+              </span>
+            </h1>
+
+            <p className="text-xl text-gray-700 mb-8 max-w-2xl leading-relaxed">
+              Master in-demand skills with our curated collection of professional
+              courses taught by industry leaders.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4">
+              {currentUser ? (
+                <Link
+                  to="/courses"
+                  className="glow-btn px-8 py-4 rounded-xl font-semibold inline-flex items-center gap-2"
+                >
+                  <span>📚</span>
+                  Browse All Courses
+                </Link>
+              ) : (
+                <Link
+                  to="/login"
+                  className="glow-btn px-8 py-4 rounded-xl font-semibold inline-flex items-center gap-2"
+                >
+                  <span>🚀</span>
+                  Start Learning Today
+                </Link>
+              )}
+              <Link
+                to="#featured-courses"
+                className="px-8 py-4 rounded-xl font-semibold border-2 border-purple-200 text-purple-700 hover:shadow-glow-purple transition-all duration-300 inline-flex items-center gap-2"
+              >
+                <span>🎓</span>
+                Explore Courses
+              </Link>
+            </div>
           </div>
 
-          <h1 className="text-4xl sm:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-            Advance Your Career With
-            <span className="text-blue-600 block bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              Expert-Led Courses
-            </span>
-          </h1>
-
-          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed">
-            Master in-demand skills with our curated collection of professional
-            courses taught by industry leaders.
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            {currentUser ? (
-              <Link
-                to="/courses"
-                className="bg-blue-600 text-white px-8 py-4 rounded-xl font-semibold hover:bg-blue-700 transition-all duration-300 hover:shadow-lg flex items-center gap-2"
-              >
-                <span>📚</span>
-                Browse All Courses
-              </Link>
-            ) : (
-              <Link
-                to="/login"
-                className="bg-blue-600 text-white px-8 py-4 rounded-xl font-semibold hover:bg-blue-700 transition-all duration-300 hover:shadow-lg flex items-center gap-2"
-              >
-                <span>🚀</span>
-                Start Learning Today
-              </Link>
-            )}
-            <Link
-              to="#featured-courses"
-              className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-xl font-semibold hover:border-blue-600 hover:text-blue-600 transition-all duration-300 flex items-center gap-2"
-            >
-              <span>🎓</span>
-              Explore Courses
-            </Link>
+          {/* Animated Orb on the right */}
+          <div className="hidden lg:flex items-center justify-center">
+            <div className="orb-wrap">
+              <div className="orb-center" />
+              <div className="orbit" style={{ animationDuration: '14s' }}>
+                <div className="dot" style={{ top: '4%', left: '50%' }}>✨</div>
+                <div className="dot" style={{ top: '50%', left: '92%' }}>🐍</div>
+                <div className="dot" style={{ top: '92%', left: '50%' }}>⚛️</div>
+                <div className="dot" style={{ top: '50%', left: '8%' }}>☕</div>
+                <div className="dot" style={{ top: '18%', left: '78%' }}>🟨</div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -393,10 +409,10 @@ export default function Home() {
             {featuredCourses.map((course) => (
               <div
                 key={course.id}
-                className="bg-white rounded-2xl border border-gray-200 hover:shadow-2xl transition-all duration-300 overflow-hidden group hover:-translate-y-2"
+                className="glow-card transition-all duration-300 overflow-hidden group"
               >
                 {/* Course Image */}
-                <div className="h-48 bg-gradient-to-r from-blue-500 to-purple-600 relative overflow-hidden">
+                <div className="h-48 bg-gradient-to-r from-purple-600 to-glowPurple relative overflow-hidden">
                   <img
                     src={course.coverImageUrl}
                     alt={course.title}
@@ -425,11 +441,11 @@ export default function Home() {
                 </div>
 
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2 line-clamp-2 group-hover:text-blue-600 transition-colors">
+                  <h3 className="text-xl font-bold text-gray-900 mb-2 line-clamp-2 group-hover:text-purple-600 transition-colors">
                     {course.title}
                   </h3>
                   <p className="text-gray-600 text-sm mb-3 flex items-center gap-2">
-                    <span className="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center text-xs">
+                    <span className="w-6 h-6 bg-purple-100 rounded-full flex items-center justify-center text-xs">
                       👤
                     </span>
                     {course.instructorName}
@@ -461,13 +477,13 @@ export default function Home() {
                   <div className="flex gap-2">
                     <button
                       onClick={() => handleViewDetails(course.id)}
-                      className="flex-1 border-2 border-blue-600 text-blue-600 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-all duration-300 text-center text-sm"
+                      className="flex-1 border-2 border-purple-600 text-purple-600 py-3 rounded-lg font-semibold hover:bg-purple-600 hover:text-white transition-all duration-300 text-center text-sm"
                     >
                       View Details
                     </button>
                     <button
                       onClick={() => handleEnrollClick(course.id)}
-                      className="flex-1 bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-all duration-300 text-center text-sm"
+                      className="flex-1 bg-gradient-to-r from-purple-600 to-glowPurple text-white py-3 rounded-lg font-semibold hover:shadow-glow-purple transition-all duration-300 text-center text-sm"
                     >
                       Enroll Now
                     </button>
@@ -481,7 +497,7 @@ export default function Home() {
             <div className="text-center mt-12">
               <Link
                 to="/courses"
-                className="inline-flex items-center gap-2 text-blue-600 font-semibold hover:text-blue-700 text-lg border-2 border-blue-600 px-8 py-3 rounded-xl hover:bg-blue-600 hover:text-white transition-all duration-300"
+                className="inline-flex items-center gap-2 text-purple-600 font-semibold hover:text-purple-700 text-lg border-2 border-purple-600 px-8 py-3 rounded-xl hover:bg-purple-600 hover:text-white transition-all duration-300"
               >
                 View All Courses ({courses.length})<span>→</span>
               </Link>
@@ -491,30 +507,30 @@ export default function Home() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-700 text-white">
+      <section className="py-16 bg-gradient-to-r from-purple-600 to-glowPurple text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
             <div>
               <div className="text-4xl font-bold mb-2">{courses.length}+</div>
-              <div className="text-blue-100 text-sm font-medium">
+              <div className="text-purple-100 text-sm font-medium">
                 Quality Courses
               </div>
             </div>
             <div>
               <div className="text-4xl font-bold mb-2">25K+</div>
-              <div className="text-blue-100 text-sm font-medium">
+              <div className="text-purple-100 text-sm font-medium">
                 Happy Students
               </div>
             </div>
             <div>
               <div className="text-4xl font-bold mb-2">50+</div>
-              <div className="text-blue-100 text-sm font-medium">
+              <div className="text-purple-100 text-sm font-medium">
                 Expert Instructors
               </div>
             </div>
             <div>
               <div className="text-4xl font-bold mb-2">94%</div>
-              <div className="text-blue-100 text-sm font-medium">
+              <div className="text-purple-100 text-sm font-medium">
                 Success Rate
               </div>
             </div>
@@ -592,25 +608,25 @@ export default function Home() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600">
+      <section className="py-16 bg-gradient-to-r from-purple-600 to-glowPurple">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
             Ready to Transform Your Career?
           </h2>
-          <p className="text-blue-100 text-lg mb-8 max-w-2xl mx-auto">
+          <p className="text-purple-100 text-lg mb-8 max-w-2xl mx-auto">
             Join thousands of students who have advanced their careers with our
             expert-led courses
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to={currentUser ? "/courses" : "/login"}
-              className="bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-all duration-300 hover:shadow-lg inline-flex items-center gap-2"
+              className="bg-white text-purple-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-all duration-300 hover:shadow-lg inline-flex items-center gap-2"
             >
               {currentUser ? "🚀 Continue Learning" : "🎯 Get Started Now"}
             </Link>
             <Link
               to="#featured-courses"
-              className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300"
+              className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300"
             >
               Browse Courses
             </Link>

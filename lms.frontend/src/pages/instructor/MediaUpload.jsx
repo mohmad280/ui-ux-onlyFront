@@ -140,17 +140,17 @@ export default function MediaUpload() {
 
   const handleDragOver = (e) => {
     e.preventDefault();
-    e.currentTarget.classList.add("border-blue-500", "bg-blue-50");
+    e.currentTarget.classList.add("border-purple-500", "bg-purple-50");
   };
 
   const handleDragLeave = (e) => {
     e.preventDefault();
-    e.currentTarget.classList.remove("border-blue-500", "bg-blue-50");
+    e.currentTarget.classList.remove("border-purple-500", "bg-purple-50");
   };
 
   const handleDrop = (e) => {
     e.preventDefault();
-    e.currentTarget.classList.remove("border-blue-500", "bg-blue-50");
+    e.currentTarget.classList.remove("border-purple-500", "bg-purple-50");
 
     const files = e.dataTransfer.files;
     if (files.length > 0) {
@@ -165,7 +165,7 @@ export default function MediaUpload() {
       case "image":
         return (
           <svg
-            className="w-8 h-8 text-blue-600"
+            className="w-8 h-8 text-purple-600"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -268,14 +268,14 @@ export default function MediaUpload() {
           {/* Upload Area */}
           <div className="space-y-6">
             {/* Lesson Selector */}
-            <div className="bg-blue-50 rounded-xl p-6">
-              <h3 className="text-lg font-semibold text-blue-900 mb-4">
+            <div className="bg-purple-50 rounded-xl p-6">
+              <h3 className="text-lg font-semibold text-purple-900 mb-4">
                 Step 1: Select Lesson
               </h3>
               <select
                 value={selectedLessonId}
                 onChange={(e) => setSelectedLessonId(e.target.value)}
-                className="w-full p-3 border border-blue-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white"
+                className="w-full p-3 border border-purple-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 bg-white"
                 required
               >
                 <option value="">Choose a lesson to attach media</option>
@@ -286,7 +286,7 @@ export default function MediaUpload() {
                 ))}
               </select>
               {lessons.length === 0 && (
-                <p className="text-sm text-blue-700 mt-2">
+                <p className="text-sm text-purple-700 mt-2">
                   No lessons found for this course. Please create lessons first.
                 </p>
               )}
@@ -294,7 +294,7 @@ export default function MediaUpload() {
 
             {/* Drag & Drop Zone */}
             <div
-              className="border-2 border-dashed border-gray-300 rounded-2xl p-8 text-center transition-all duration-200 hover:border-blue-400 hover:bg-blue-50"
+              className="border-2 border-dashed border-gray-300 rounded-2xl p-8 text-center transition-all duration-200 hover:border-purple-400 hover:bg-purple-50"
               onDragOver={handleDragOver}
               onDragLeave={handleDragLeave}
               onDrop={handleDrop}
@@ -317,7 +317,7 @@ export default function MediaUpload() {
                 <div className="flex text-sm text-gray-600 justify-center">
                   <label
                     htmlFor="file-upload"
-                    className="relative cursor-pointer bg-white rounded-md font-medium text-blue-600 hover:text-blue-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-blue-500"
+                    className="relative cursor-pointer bg-white rounded-md font-medium text-purple-600 hover:text-purple-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-purple-500"
                   >
                     <span>Upload a file</span>
                     <input
@@ -463,8 +463,8 @@ export default function MediaUpload() {
               Supported Formats
             </h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              <div className="text-center p-3 bg-blue-50 rounded-lg">
-                <div className="text-blue-600 font-semibold">Images</div>
+              <div className="text-center p-3 bg-purple-50 rounded-lg">
+                <div className="text-purple-600 font-semibold">Images</div>
                 <div className="text-sm text-gray-600 mt-1">
                   JPG, PNG, GIF, WebP
                 </div>

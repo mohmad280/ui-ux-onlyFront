@@ -22,12 +22,12 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="bg-white border-b border-gray-200 fixed w-full top-0 z-50">
+      <nav className="nav-surface border-b border-transparent fixed w-full top-0 z-50 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
+              <div className="w-8 h-8 bg-purple-600 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-sm">L</span>
               </div>
               <span className="font-bold text-xl text-gray-900">LearnPro</span>
@@ -39,8 +39,8 @@ export default function Navbar() {
                 to="/"
                 className={`font-medium transition-colors ${
                   isActiveRoute("/")
-                    ? "text-blue-600"
-                    : "text-gray-600 hover:text-blue-600"
+                    ? "text-purple-700"
+                    : "text-gray-700 hover:text-purple-700 glow-link"
                 }`}
               >
                 Home
@@ -49,8 +49,8 @@ export default function Navbar() {
                 to="/#featured-courses"
                 className={`font-medium transition-colors ${
                   isActiveRoute("/courses")
-                    ? "text-blue-600"
-                    : "text-gray-600 hover:text-blue-600"
+                    ? "text-purple-700"
+                    : "text-gray-700 hover:text-purple-700 glow-link"
                 }`}
               >
                 Courses
@@ -59,7 +59,7 @@ export default function Navbar() {
               {user && (
                 <Link
                   to={`/${user.role}/dashboard`}
-                  className="bg-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors"
+                  className="glow-btn font-medium"
                 >
                   Dashboard
                 </Link>
@@ -80,7 +80,7 @@ export default function Navbar() {
                         {user.role}
                       </div>
                     </div>
-                    <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white text-sm font-medium">
+                    <div className="w-8 h-8 bg-purple-600 rounded-full flex items-center justify-center text-white text-sm font-medium">
                       {(user.name || user.username).charAt(0).toUpperCase()}
                     </div>
                   </div>
@@ -88,7 +88,7 @@ export default function Navbar() {
                   {/* Logout */}
                   <button
                     onClick={handleLogout}
-                    className="text-gray-600 hover:text-red-600 font-medium text-sm transition-colors"
+                    className="text-gray-700 hover:text-red-600 font-medium text-sm transition-colors"
                   >
                     Logout
                   </button>
@@ -97,13 +97,13 @@ export default function Navbar() {
                 <>
                   <Link
                     to="/login"
-                    className="text-gray-700 hover:text-blue-600 font-medium text-sm transition-colors"
+                    className="text-gray-700 hover:text-purple-700 font-medium text-sm transition-colors glow-link"
                   >
                     Login
                   </Link>
                   <Link
                     to="/signup"
-                    className="bg-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors text-sm"
+                    className="glow-btn text-sm font-medium"
                   >
                     Sign Up
                   </Link>
@@ -143,13 +143,13 @@ export default function Navbar() {
             <div className="px-4 py-6 space-y-4">
               <Link
                 to="/"
-                className="block py-2 font-medium text-gray-700 hover:text-blue-600"
+                className="block py-2 font-medium text-gray-700 hover:text-purple-700"
               >
                 Home
               </Link>
               <Link
                 to="/courses"
-                className="block py-2 font-medium text-gray-700 hover:text-blue-600"
+                className="block py-2 font-medium text-gray-700 hover:text-purple-700"
               >
                 Courses
               </Link>
@@ -158,7 +158,7 @@ export default function Navbar() {
                 <>
                   <div className="pt-4 border-t border-gray-200">
                     <div className="flex items-center space-x-3 py-2">
-                      <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white text-sm font-medium">
+                      <div className="w-8 h-8 bg-purple-600 rounded-full flex items-center justify-center text-white text-sm font-medium">
                         {(user.name || user.username).charAt(0).toUpperCase()}
                       </div>
                       <div>
@@ -172,7 +172,7 @@ export default function Navbar() {
                     </div>
                     <Link
                       to={`/${user.role}/dashboard`}
-                      className="block w-full bg-blue-600 text-white text-center py-2 rounded-lg font-medium hover:bg-blue-700 mt-3"
+                      className="block w-full bg-purple-600 text-white text-center py-2 rounded-lg font-medium hover:bg-purple-700 mt-3"
                     >
                       Dashboard
                     </Link>
@@ -194,7 +194,7 @@ export default function Navbar() {
                   </Link>
                   <Link
                     to="/signup"
-                    className="block w-full text-center py-2 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700"
+                    className="block w-full text-center py-2 bg-purple-600 text-white font-medium rounded-lg hover:bg-purple-700"
                   >
                     Sign Up
                   </Link>

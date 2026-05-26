@@ -100,10 +100,10 @@ export default function Signup() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-white to-purple-50 p-4">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-50 via-white to-glowPurple/20 p-4">
       {/* Background Decorations */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-pulse"></div>
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-pulse"></div>
         <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-pulse animation-delay-2000"></div>
         <div className="absolute top-40 left-1/2 w-80 h-80 bg-cyan-200 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-pulse animation-delay-4000"></div>
       </div>
@@ -114,7 +114,7 @@ export default function Signup() {
         <div className="bg-white rounded-3xl shadow-2xl overflow-hidden transform hover:scale-[1.01] transition-all duration-300">
           <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[700px]">
             {/* Left Column - Student Benefits */}
-            <div className="bg-gradient-to-br from-blue-600 to-purple-700 p-8 text-white">
+            <div className="bg-gradient-to-br from-purple-600 to-glowPurple p-8 text-white">
               <div className="flex flex-col h-full">
                 {/* Header */}
                 <div className="text-center mb-8">
@@ -126,7 +126,7 @@ export default function Signup() {
                       LearnPro
                     </span>
                   </Link>
-                  <p className="text-blue-100 mt-3">
+                  <p className="text-purple-100 mt-3">
                     Start your learning journey today!
                   </p>
                 </div>
@@ -176,7 +176,7 @@ export default function Signup() {
                       <div className="text-2xl">{benefit.icon}</div>
                       <div>
                         <h4 className="font-semibold">{benefit.title}</h4>
-                        <p className="text-blue-100 text-sm">
+                        <p className="text-purple-100 text-sm">
                           {benefit.description}
                         </p>
                       </div>
@@ -186,11 +186,11 @@ export default function Signup() {
 
                 {/* Already have account */}
                 <div className="text-center mt-8 pt-6 border-t border-white/20">
-                  <p className="text-blue-100">
+                  <p className="text-purple-100">
                     Already a student?{" "}
                     <Link
                       to="/login"
-                      className="font-semibold text-white hover:text-blue-200 transition-colors duration-200 underline"
+                      className="font-semibold text-white hover:text-purple-200 transition-colors duration-200 underline"
                     >
                       Sign in here
                     </Link>
@@ -213,16 +213,16 @@ export default function Signup() {
                 </div>
 
                 {/* Student Badge */}
-                <div className="bg-blue-50 border border-blue-200 rounded-xl p-4 mb-6">
+                <div className="bg-purple-50 border border-purple-200 rounded-xl p-4 mb-6">
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
-                      <span className="text-blue-600 text-lg">🎓</span>
+                    <div className="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
+                      <span className="text-purple-600 text-lg">🎓</span>
                     </div>
                     <div>
-                      <p className="text-sm font-medium text-blue-800">
+                      <p className="text-sm font-medium text-purple-800">
                         Student Registration
                       </p>
-                      <p className="text-xs text-blue-600 mt-1">
+                      <p className="text-xs text-purple-600 mt-1">
                         Start learning from industry experts today
                       </p>
                     </div>
@@ -284,7 +284,7 @@ export default function Signup() {
                         value={form.username}
                         onChange={handleChange}
                         required
-                        className="block w-full pl-10 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 bg-white/50"
+                        className="block w-full pl-10 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all duration-200 bg-white/50"
                         placeholder="Choose a username"
                       />
                     </div>
@@ -317,7 +317,7 @@ export default function Signup() {
                         value={form.email}
                         onChange={handleChange}
                         required
-                        className="block w-full pl-10 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 bg-white/50"
+                        className="block w-full pl-10 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all duration-200 bg-white/50"
                         placeholder="Enter your email address"
                       />
                     </div>
@@ -332,7 +332,7 @@ export default function Signup() {
                       <button
                         type="button"
                         onClick={() => setShowPassword(!showPassword)}
-                        className="text-sm text-blue-600 hover:text-blue-500 font-medium transition-colors duration-200"
+                        className="text-sm text-purple-600 hover:text-purple-500 font-medium transition-colors duration-200"
                       >
                         {showPassword ? "Hide" : "Show"}
                       </button>
@@ -359,7 +359,7 @@ export default function Signup() {
                         value={form.password}
                         onChange={handleChange}
                         required
-                        className="block w-full pl-10 pr-12 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 bg-white/50"
+                        className="block w-full pl-10 pr-12 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all duration-200 bg-white/50"
                         placeholder="Create a strong password"
                       />
                     </div>
@@ -406,20 +406,20 @@ export default function Signup() {
                       checked={agreedToTerms}
                       onChange={(e) => setAgreedToTerms(e.target.checked)}
                       required
-                      className="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500 mt-1"
+                      className="w-4 h-4 text-purple-600 border-gray-300 rounded focus:ring-purple-500 mt-1"
                     />
                     <label className="text-sm text-gray-600">
                       I agree to the{" "}
                       <Link
                         to="/terms"
-                        className="text-blue-600 hover:text-blue-500 font-medium"
+                        className="text-purple-600 hover:text-purple-500 font-medium"
                       >
                         Terms of Service
                       </Link>{" "}
                       and{" "}
                       <Link
                         to="/privacy"
-                        className="text-blue-600 hover:text-blue-500 font-medium"
+                        className="text-purple-600 hover:text-purple-500 font-medium"
                       >
                         Privacy Policy
                       </Link>
@@ -430,7 +430,7 @@ export default function Signup() {
                   <button
                     type="submit"
                     disabled={isLoading || !agreedToTerms}
-                    className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 px-4 rounded-xl font-semibold hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 transform hover:-translate-y-0.5 flex items-center justify-center gap-3"
+                    className="w-full bg-gradient-to-r from-purple-600 to-glowPurple text-white py-4 px-4 rounded-xl font-semibold hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 transform hover:-translate-y-0.5 flex items-center justify-center gap-3"
                   >
                     {isLoading ? (
                       <>

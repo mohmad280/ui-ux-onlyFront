@@ -75,7 +75,7 @@ export default function InstructorLayout({ children }) {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50 flex">
+    <div className="min-h-screen glow-bg flex">
       {/* Mobile Sidebar Overlay */}
       {isSidebarOpen && (
         <div
@@ -95,9 +95,9 @@ export default function InstructorLayout({ children }) {
       `}
       >
         {/* Sidebar Header */}
-        <div className="p-6 border-b border-gray-200">
+        <div className="p-6 border-b border-transparent">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+            <div className="w-10 h-10 bg-gradient-to-br from-purple-600 to-glowPurple rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-sm">I</span>
             </div>
             <div>
@@ -119,8 +119,8 @@ export default function InstructorLayout({ children }) {
                 flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium transition-all duration-200
                 ${
                   location.pathname === item.path
-                    ? "bg-blue-50 text-blue-700 border-r-2 border-blue-600 shadow-sm"
-                    : "text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                    ? "bg-purple-50 text-purple-700 border-r-2 border-purple-600 shadow-sm"
+                      : "text-gray-700 hover:bg-white hover:text-gray-900"
                 }
               `}
               onClick={() => setIsSidebarOpen(false)}
@@ -128,7 +128,7 @@ export default function InstructorLayout({ children }) {
               <div
                 className={`${
                   location.pathname === item.path
-                    ? "text-blue-600"
+                    ? "text-purple-600"
                     : "text-gray-400"
                 }`}
               >
@@ -142,7 +142,7 @@ export default function InstructorLayout({ children }) {
         {/* User Section */}
         <div className="p-4 border-t border-gray-200">
           <div className="flex items-center gap-3 mb-4 p-3 bg-gray-50 rounded-lg">
-            <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white font-medium shadow-sm">
+            <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-glowPurple rounded-full flex items-center justify-center text-white font-medium shadow-sm">
               {user?.name?.charAt(0) || user?.username?.charAt(0) || "I"}
             </div>
             <div className="flex-1 min-w-0">
@@ -203,7 +203,7 @@ export default function InstructorLayout({ children }) {
             <div className="relative">
               <button
                 onClick={() => setShowUserMenu(!showUserMenu)}
-                className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white font-medium shadow-sm"
+                className="w-10 h-10 bg-gradient-to-r from-purple-500 to-glowPurple rounded-full flex items-center justify-center text-white font-medium shadow-sm"
               >
                 {user?.name?.charAt(0) || user?.username?.charAt(0) || "I"}
               </button>
@@ -265,7 +265,7 @@ export default function InstructorLayout({ children }) {
               <div className="relative">
                 <button
                   onClick={() => setShowUserMenu(!showUserMenu)}
-                  className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white font-medium shadow-sm hover:shadow-md transition-shadow"
+                  className="w-12 h-12 bg-gradient-to-r from-purple-500 to-glowPurple rounded-full flex items-center justify-center text-white font-medium shadow-sm hover:shadow-md transition-shadow"
                 >
                   {user?.name?.charAt(0) || user?.username?.charAt(0) || "I"}
                 </button>

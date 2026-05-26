@@ -220,7 +220,7 @@ export default function CourseApproval() {
       <AdminLayout>
         <div className="flex items-center justify-center min-h-64">
           <div className="text-center">
-            <div className="w-12 h-12 border-4 border-blue-600 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+            <div className="w-12 h-12 border-4 border-purple-600 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
             <p className="text-gray-600">Loading courses...</p>
           </div>
         </div>
@@ -243,7 +243,7 @@ export default function CourseApproval() {
           </div>
           <button
             onClick={() => setShowAddCourse(true)}
-            className="mt-4 sm:mt-0 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors shadow-sm hover:shadow-md flex items-center gap-2"
+            className="mt-4 sm:mt-0 bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-medium transition-colors shadow-sm hover:shadow-md flex items-center gap-2"
           >
             <svg
               className="w-5 h-5"
@@ -297,7 +297,7 @@ export default function CourseApproval() {
               onClick={() => setActiveTab("pending")}
               className={`flex-1 py-3 px-4 text-sm font-medium rounded-lg transition-colors ${
                 activeTab === "pending"
-                  ? "bg-blue-100 text-blue-700 border border-blue-200"
+                  ? "bg-purple-100 text-purple-700 border border-purple-200"
                   : "text-gray-600 hover:text-gray-900 hover:bg-gray-100"
               }`}
             >
@@ -422,7 +422,7 @@ export default function CourseApproval() {
                     )}
                     <button
                       onClick={() => handleEdit(course)}
-                      className="flex-1 bg-blue-600 hover:bg-blue-700 text-white py-2 px-3 rounded-lg font-medium transition-colors flex items-center justify-center gap-2 text-sm"
+                      className="flex-1 bg-purple-600 hover:bg-purple-700 text-white py-2 px-3 rounded-lg font-medium transition-colors flex items-center justify-center gap-2 text-sm"
                     >
                       <svg
                         className="w-4 h-4"
@@ -515,7 +515,7 @@ export default function CourseApproval() {
                     onChange={(e) =>
                       setNewCourse({ ...newCourse, title: e.target.value })
                     }
-                    className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
                     required
                   />
                 </div>
@@ -534,7 +534,7 @@ export default function CourseApproval() {
                       })
                     }
                     rows="3"
-                    className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
                     required
                   />
                 </div>
@@ -556,7 +556,7 @@ export default function CourseApproval() {
                       }
                       min="0"
                       step="0.01"
-                      className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                      className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
                       required
                     />
                   </div>
@@ -576,7 +576,7 @@ export default function CourseApproval() {
                         })
                       }
                       min="0"
-                      className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                      className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
                       required
                     />
                   </div>
@@ -590,7 +590,7 @@ export default function CourseApproval() {
                       onChange={(e) =>
                         setNewCourse({ ...newCourse, level: e.target.value })
                       }
-                      className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                      className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
                     >
                       <option value="BEGINNER">Beginner</option>
                       <option value="INTERMEDIATE">Intermediate</option>
@@ -608,7 +608,7 @@ export default function CourseApproval() {
                     onChange={(e) =>
                       setNewCourse({ ...newCourse, category: e.target.value })
                     }
-                    className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
                   >
                     <option value="Programming">Programming</option>
                     <option value="Design">Design</option>
@@ -635,7 +635,7 @@ export default function CourseApproval() {
                         coverImageUrl: e.target.value,
                       })
                     }
-                    className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
                   />
                 </div>
               </div>
@@ -643,7 +643,7 @@ export default function CourseApproval() {
               <div className="flex gap-3 mt-6">
                 <button
                   onClick={handleAddCourse}
-                  className="flex-1 bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-medium transition-colors"
+                  className="flex-1 bg-purple-600 hover:bg-purple-700 text-white py-3 rounded-lg font-medium transition-colors"
                 >
                   Add Course
                 </button>
@@ -679,7 +679,7 @@ export default function CourseApproval() {
                         title: e.target.value,
                       })
                     }
-                    className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
                     required
                   />
                 </div>
@@ -698,7 +698,7 @@ export default function CourseApproval() {
                       })
                     }
                     rows="3"
-                    className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
                     required
                   />
                 </div>
@@ -720,7 +720,7 @@ export default function CourseApproval() {
                       }
                       min="0"
                       step="0.01"
-                      className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                      className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
                       required
                     />
                   </div>
@@ -740,7 +740,7 @@ export default function CourseApproval() {
                         })
                       }
                       min="0"
-                      className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                      className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
                       required
                     />
                   </div>
@@ -757,7 +757,7 @@ export default function CourseApproval() {
                           level: e.target.value,
                         })
                       }
-                      className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                      className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
                     >
                       <option value="BEGINNER">Beginner</option>
                       <option value="INTERMEDIATE">Intermediate</option>
@@ -778,7 +778,7 @@ export default function CourseApproval() {
                         category: e.target.value,
                       })
                     }
-                    className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
                   >
                     <option value="Programming">Programming</option>
                     <option value="Design">Design</option>
@@ -805,7 +805,7 @@ export default function CourseApproval() {
                         coverImageUrl: e.target.value,
                       })
                     }
-                    className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
                   />
                 </div>
               </div>
@@ -813,7 +813,7 @@ export default function CourseApproval() {
               <div className="flex gap-3 mt-6">
                 <button
                   onClick={handleUpdateCourse}
-                  className="flex-1 bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-medium transition-colors"
+                  className="flex-1 bg-purple-600 hover:bg-purple-700 text-white py-3 rounded-lg font-medium transition-colors"
                 >
                   Update Course
                 </button>

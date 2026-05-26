@@ -70,7 +70,7 @@ export default function UserManagement() {
       case "ROLE_ADMIN":
         return "bg-red-100 text-red-800 border-red-200";
       case "ROLE_INSTRUCTOR":
-        return "bg-blue-100 text-blue-800 border-blue-200";
+        return "bg-purple-100 text-purple-800 border-purple-200";
       case "ROLE_STUDENT":
         return "bg-green-100 text-green-800 border-green-200";
       default:
@@ -95,7 +95,7 @@ export default function UserManagement() {
       <AdminLayout>
         <div className="flex items-center justify-center min-h-64">
           <div className="text-center">
-            <div className="w-12 h-12 border-4 border-blue-600 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+            <div className="w-12 h-12 border-4 border-purple-600 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
             <p className="text-gray-600">Loading users...</p>
           </div>
         </div>
@@ -160,7 +160,7 @@ export default function UserManagement() {
                   placeholder="Search by username or email..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
                 />
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                   <svg
@@ -188,7 +188,7 @@ export default function UserManagement() {
               <select
                 value={roleFilter}
                 onChange={(e) => setRoleFilter(e.target.value)}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
               >
                 <option value="ALL">All Roles</option>
                 <option value="ROLE_ADMIN">Admin</option>
@@ -230,7 +230,7 @@ export default function UserManagement() {
                   >
                     <td className="px-6 py-4 whitespace-nowrap">
                       <div className="flex items-center">
-                        <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
+                        <div className="w-10 h-10 bg-gradient-to-r from-purple-600 to-glowPurple rounded-full flex items-center justify-center text-white font-bold text-sm">
                           {user.username?.charAt(0).toUpperCase()}
                         </div>
                         <div className="ml-4">
@@ -252,7 +252,7 @@ export default function UserManagement() {
                           <select
                             value={newRole}
                             onChange={(e) => setNewRole(e.target.value)}
-                            className="text-sm border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500"
+                            className="text-sm border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-purple-500"
                           >
                             <option value="ROLE_STUDENT">Student</option>
                             <option value="ROLE_INSTRUCTOR">Instructor</option>
@@ -285,7 +285,7 @@ export default function UserManagement() {
                               setEditingUser(user.id);
                               setNewRole(user.role?.name || "ROLE_STUDENT");
                             }}
-                            className="text-blue-600 hover:text-blue-900 text-sm transition-colors flex items-center gap-1"
+                            className="text-purple-600 hover:text-purple-900 text-sm transition-colors flex items-center gap-1"
                           >
                             <svg
                               className="w-4 h-4"

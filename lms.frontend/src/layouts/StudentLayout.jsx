@@ -54,7 +54,7 @@ export default function StudentLayout({ children }) {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 flex">
+    <div className="min-h-screen glow-bg flex">
       {/* Enhanced Sidebar - FIXED OVERLAP ISSUE */}
       <div
         className={`bg-white/95 backdrop-blur-xl w-80 shadow-2xl fixed lg:static h-full transform transition-all duration-500 z-50 border-r border-gray-200/60 flex flex-col ${
@@ -64,13 +64,13 @@ export default function StudentLayout({ children }) {
         }`}
       >
         {/* Sidebar Header */}
-        <div className="p-6 border-b border-gray-200/60 bg-gradient-to-r from-blue-600/10 to-purple-600/10">
+        <div className="p-6 border-b border-gray-200/60 bg-gradient-to-r from-purple-600/10 to-glowPurple/10">
           <div className="flex items-center gap-4">
-            <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl flex items-center justify-center shadow-lg">
+            <div className="w-12 h-12 bg-gradient-to-br from-purple-600 to-glowPurple rounded-2xl flex items-center justify-center shadow-lg">
               <span className="text-white font-bold text-lg">🎓</span>
             </div>
             <div>
-              <h2 className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              <h2 className="text-xl font-bold bg-gradient-to-r from-purple-600 to-glowPurple bg-clip-text text-transparent">
                 Learning Hub
               </h2>
               <p className="text-xs text-gray-500 font-medium">
@@ -87,10 +87,10 @@ export default function StudentLayout({ children }) {
               key={item.path}
               to={item.path}
               onClick={() => setIsSidebarOpen(false)}
-              className={`group flex items-center gap-4 p-4 rounded-2xl transition-all duration-300 border border-transparent hover:border-blue-200/50 ${
+              className={`group flex items-center gap-4 p-4 rounded-2xl transition-all duration-300 border border-transparent hover:border-purple-200/50 ${
                 location.pathname === item.path
-                  ? "bg-gradient-to-r from-blue-50 to-indigo-50 shadow-lg shadow-blue-100/50 border-blue-200 text-blue-700"
-                  : "text-gray-600 hover:bg-white hover:shadow-lg hover:text-gray-900"
+                  ? "bg-gradient-to-r from-purple-50 to-glowPurple/50 shadow-lg shadow-purple-100/50 border-purple-200 text-purple-700"
+                    : "text-gray-600 hover:bg-white hover:shadow-lg hover:text-gray-900"
               }`}
             >
               <span className="text-2xl transition-transform duration-300 group-hover:scale-110">
@@ -104,8 +104,8 @@ export default function StudentLayout({ children }) {
                   {item.desc}
                 </span>
               </div>
-              {location.pathname === item.path && (
-                <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
+                {location.pathname === item.path && (
+                <div className="w-2 h-2 bg-purple-500 rounded-full animate-pulse"></div>
               )}
             </Link>
           ))}
@@ -113,7 +113,7 @@ export default function StudentLayout({ children }) {
 
         {/* Sidebar Footer - FIXED: Removed absolute and added mt-auto */}
         <div className="p-6 border-t border-gray-200/60 bg-white/80 mt-auto">
-          <div className="flex items-center gap-3 mb-4 p-3 bg-gradient-to-r from-slate-100 to-blue-50 rounded-2xl">
+          <div className="flex items-center gap-3 mb-4 p-3 bg-gradient-to-r from-slate-100 to-purple-50 rounded-2xl">
             <div className="w-10 h-10 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl flex items-center justify-center">
               {/* Use username instead of name */}
               <span className="text-white font-bold text-sm">
@@ -146,7 +146,7 @@ export default function StudentLayout({ children }) {
       {/* Main Content Area */}
       <div className="flex-1 lg:ml-0 min-w-0 flex flex-col">
         {/* Enhanced Header */}
-        <header
+          <header
           className={`bg-white/80 backdrop-blur-xl border-b border-gray-200/60 lg:static sticky top-0 z-40 transition-all duration-300 ${
             scrolled ? "shadow-lg shadow-black/5" : "shadow-sm"
           }`}
@@ -178,7 +178,7 @@ export default function StudentLayout({ children }) {
                 className="flex items-center gap-3 p-2 rounded-2xl hover:bg-gray-100 transition-all duration-300 group border border-transparent hover:border-gray-200"
               >
                 <div className="relative">
-                  <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-shadow duration-300">
+                  <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-glowPurple rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-shadow duration-300">
                     {/*  Use username instead of name */}
                     <span className="text-white font-bold text-sm">
                       {user?.username?.charAt(0) || "S"}
@@ -213,7 +213,7 @@ export default function StudentLayout({ children }) {
 
                   <Link
                     to="/student/profile"
-                    className="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-blue-50 transition-all duration-200 group"
+                    className="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-purple-50 transition-all duration-200 group"
                     onClick={() => setShowDropdown(false)}
                   >
                     <span className="text-lg group-hover:scale-110 transition-transform">
@@ -224,7 +224,7 @@ export default function StudentLayout({ children }) {
 
                   <Link
                     to="/student/settings"
-                    className="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-blue-50 transition-all duration-200 group"
+                    className="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-purple-50 transition-all duration-200 group"
                     onClick={() => setShowDropdown(false)}
                   >
                     <span className="text-lg group-hover:scale-110 transition-transform">
