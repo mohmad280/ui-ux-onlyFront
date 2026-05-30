@@ -1,0 +1,4 @@
+com\lms\backend\service\CourseServiceImplTest.class
+com\lms\backend\service\UserServiceImplTest.class
+com\lms\backend\LmsBackendApplicationTests.class
+com\lms\backend\service\AuthServiceImplTest.class
