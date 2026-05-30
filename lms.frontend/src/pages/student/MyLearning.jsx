@@ -25,8 +25,8 @@ export default function MyLearning() {
   });
 
   const getProgressColor = (progress) => {
-    if (progress >= 80) return "from-green-500 to-emerald-500";
-    if (progress >= 50) return "from-purple-500 to-fuchsia-500";
+    if (progress >= 80) return "from-purple-600 to-glowPurple";
+    if (progress >= 50) return "from-purple-500 to-glowPurple";
     if (progress >= 25) return "from-yellow-500 to-orange-500";
     return "from-gray-400 to-gray-600";
   };
@@ -56,7 +56,7 @@ export default function MyLearning() {
     <StudentLayout>
       {/* Enhanced Header */}
       <div className="text-center lg:text-left mb-12">
-        <div className="inline-flex items-center gap-3 px-4 py-2 bg-white/80 rounded-2xl shadow-sm border border-gray-200/60 mb-6">
+        <div className="inline-flex items-center gap-3 px-4 py-2 bg-white/85 rounded-2xl shadow-sm border border-purple-100/70 mb-6">
           <span className="text-2xl">🎓</span>
           <span className="text-sm text-gray-600">Your Learning Journey</span>
         </div>
@@ -69,7 +69,7 @@ export default function MyLearning() {
       </div>
 
       {/* Stats and Filters */}
-      <div className="bg-white/80 backdrop-blur-sm rounded-3xl shadow-lg border border-gray-200/60 p-6 mb-8">
+      <div className="glow-panel rounded-3xl p-6 mb-8">
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
           {/* Progress Overview */}
           <div className="flex flex-wrap gap-6">
@@ -136,10 +136,10 @@ export default function MyLearning() {
           return (
             <div
               key={course.id}
-              className="group bg-white/80 backdrop-blur-sm rounded-3xl shadow-lg border border-gray-200/60 overflow-hidden hover:shadow-2xl hover:scale-105 transition-all duration-500"
+              className="glow-card group rounded-3xl overflow-hidden"
             >
               {/* Course Header */}
-              <div className="h-40 bg-gradient-to-br from-purple-500/20 to-fuchsia-600/20 relative overflow-hidden">
+              <div className="h-40 bg-gradient-to-br from-purple-500/20 to-glowPurple/20 relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
                 <div className="absolute bottom-4 left-4 right-4">
                   <h3 className="text-xl font-bold text-white drop-shadow-lg mb-2">
@@ -199,7 +199,7 @@ export default function MyLearning() {
                 <div className="flex gap-3">
                   <Link
                     to={`/student/course/${course.id}`}
-                    className="flex-1 bg-gradient-to-r from-purple-600 to-fuchsia-600 text-white py-3 px-4 rounded-xl hover:shadow-lg transition-all duration-300 text-center group/continue"
+                    className="flex-1 bg-gradient-to-r from-purple-600 to-glowPurple text-white py-3 px-4 rounded-xl hover:shadow-glow-purple transition-all duration-300 text-center group/continue"
                   >
                     <div className="flex items-center justify-center gap-2">
                       <span>{isCompleted ? "Review" : "Continue"}</span>
@@ -209,7 +209,7 @@ export default function MyLearning() {
                     </div>
                   </Link>
 
-                  <button className="px-4 py-3 border border-gray-300 text-gray-700 rounded-xl hover:bg-gray-50 hover:border-gray-400 transition-all duration-300 group/info">
+                  <button className="px-4 py-3 border border-purple-100 text-gray-700 rounded-xl hover:bg-purple-50 hover:shadow-glow-purple transition-all duration-300 group/info">
                     <span className="group-hover/info:scale-110 transition-transform">
                       📊
                     </span>
@@ -252,7 +252,7 @@ export default function MyLearning() {
           </p>
           <Link
             to="/courses"
-            className="inline-flex items-center gap-3 bg-gradient-to-r from-purple-600 to-fuchsia-600 text-white py-4 px-8 rounded-2xl hover:shadow-xl transition-all duration-300 hover:scale-105"
+            className="inline-flex items-center gap-3 bg-gradient-to-r from-purple-600 to-glowPurple text-white py-4 px-8 rounded-2xl hover:shadow-glow-purple transition-all duration-300 hover:scale-105"
           >
             <span>Browse Courses</span>
             <span className="text-lg">✨</span>

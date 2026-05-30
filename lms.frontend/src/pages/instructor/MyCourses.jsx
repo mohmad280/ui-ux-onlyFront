@@ -58,7 +58,7 @@ export default function MyCourses() {
         </div>
 
         {courses.length === 0 ? (
-          <div className="text-center py-12">
+          <div className="glow-panel text-center py-12 px-6">
             <div className="text-6xl mb-4">📚</div>
             <h3 className="text-xl font-semibold text-gray-900 mb-2">
               No courses found
@@ -76,7 +76,7 @@ export default function MyCourses() {
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {courses.map((course) => (
-              <div key={course.id} className="bg-white rounded-lg border border-gray-200 p-6">
+              <div key={course.id} className="glow-card p-6">
                 <h3 className="font-semibold text-lg mb-2">{course.title}</h3>
                 <p className="text-gray-600 text-sm mb-4 line-clamp-2">
                   {course.description || "No description"}
@@ -91,7 +91,7 @@ export default function MyCourses() {
                   </span>
                   <Link
                     to={`/instructor/courses/${course.id}`}
-                    className="text-purple-600 hover:text-purple-900 text-sm font-medium"
+                    className="text-purple-600 hover:text-purple-900 hover:drop-shadow text-sm font-medium glow-link"
                   >
                     Manage →
                   </Link>

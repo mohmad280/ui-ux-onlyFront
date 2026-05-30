@@ -4,7 +4,7 @@
 /* Global body styling */
 body {
   font-family: 'Inter', sans-serif;
-  background-color: #f9fafb;
+  background-color: #fbf7ff;
   color: #1f2937;
   margin: 0;
   padding: 0;
@@ -19,31 +19,56 @@ body {
 
 /* Global glowing background for educational pages */
 .glow-bg {
-  background: radial-gradient(1200px 600px at 10% 10%, rgba(139,92,246,0.06) 0%, transparent 10%),
-              linear-gradient(180deg, #fbf7ff 0%, #f3f0ff 50%, #efe6ff 100%);
+  background:
+    radial-gradient(circle at 14% 18%, rgba(139, 92, 246, 0.16), transparent 28%),
+    radial-gradient(circle at 86% 10%, rgba(216, 180, 254, 0.38), transparent 24%),
+    radial-gradient(circle at 78% 84%, rgba(124, 58, 237, 0.12), transparent 26%),
+    linear-gradient(135deg, #fffafd 0%, #f5efff 42%, #ede7ff 100%);
+}
+
+.edu-hero-bg {
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.96) 0%, rgba(255, 255, 255, 0.84) 44%, rgba(246, 239, 255, 0.72) 100%),
+    url("https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1800&auto=format&fit=crop&q=80");
+  background-size: cover;
+  background-position: center;
+}
+
+.edu-page-shell {
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.82), rgba(255, 255, 255, 0.82)),
+    url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1800&auto=format&fit=crop&q=80");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
 }
 
 /* Navbar surface */
 .nav-surface {
-  background-color: var(--soft-purple) !important;
-  backdrop-filter: blur(6px);
+  background: rgba(239, 230, 255, 0.94) !important;
+  backdrop-filter: blur(14px);
+  box-shadow: 0 10px 30px rgba(139, 92, 246, 0.1);
 }
 
 /* Small glowing orb and orbit animations */
 .orb-wrap {
-  width: 320px;
-  height: 320px;
+  width: min(360px, 82vw);
+  height: min(360px, 82vw);
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+  filter: drop-shadow(0 30px 60px rgba(109, 40, 217, 0.22));
 }
 .orb-center {
-  width: 120px;
-  height: 120px;
+  width: 136px;
+  height: 136px;
   border-radius: 50%;
-  background: radial-gradient(circle at 30% 30%, #ffffff, var(--pastel-purple));
-  box-shadow: 0 8px 30px rgba(139,92,246,0.12), inset 0 2px 10px rgba(255,255,255,0.6);
+  background:
+    radial-gradient(circle at 30% 26%, rgba(255, 255, 255, 0.95) 0 12%, transparent 13%),
+    radial-gradient(circle at 34% 30%, #ffffff, #d9ccff 42%, #8b5cf6 100%);
+  box-shadow: 0 0 34px rgba(139, 92, 246, 0.38), inset 0 2px 18px rgba(255, 255, 255, 0.68);
+  animation: planetPulse 4s ease-in-out infinite;
 }
 .orbit {
   position: absolute;
@@ -52,22 +77,42 @@ body {
 }
 .orbit .dot {
   position: absolute;
-  left: 50%;
-  top: 6%;
-  transform-origin: -50% 150px;
-  width: 34px;
-  height: 34px;
+  transform: translate(-50%, -50%);
+  width: 48px;
+  height: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background: white;
-  box-shadow: 0 6px 18px rgba(139,92,246,0.12);
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(167, 139, 250, 0.34);
+  color: #5b21b6;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0;
+  box-shadow: 0 10px 26px rgba(139, 92, 246, 0.2);
+}
+.orbit::before,
+.orbit::after {
+  content: "";
+  position: absolute;
+  inset: 34px;
+  border: 1px solid rgba(139, 92, 246, 0.22);
+  border-radius: 50%;
+}
+.orbit::after {
+  inset: 62px;
+  transform: rotateX(64deg);
 }
 
 @keyframes orbRotate {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+@keyframes planetPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.04); }
 }
 
 /* Scrollbar customization */

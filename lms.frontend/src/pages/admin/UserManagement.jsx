@@ -120,25 +120,25 @@ export default function UserManagement() {
 
         {/* Stats */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-          <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+          <div className="glow-stat">
             <div className="text-2xl font-bold text-gray-900">
               {users.length}
             </div>
             <div className="text-sm text-gray-600">Total Users</div>
           </div>
-          <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+          <div className="glow-stat">
             <div className="text-2xl font-bold text-gray-900">
               {users.filter((u) => u.role?.name === "ROLE_STUDENT").length}
             </div>
             <div className="text-sm text-gray-600">Students</div>
           </div>
-          <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+          <div className="glow-stat">
             <div className="text-2xl font-bold text-gray-900">
               {users.filter((u) => u.role?.name === "ROLE_INSTRUCTOR").length}
             </div>
             <div className="text-sm text-gray-600">Instructors</div>
           </div>
-          <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+          <div className="glow-stat">
             <div className="text-2xl font-bold text-gray-900">
               {users.filter((u) => u.role?.name === "ROLE_ADMIN").length}
             </div>
@@ -147,7 +147,7 @@ export default function UserManagement() {
         </div>
 
         {/* Filters and Search */}
-        <div className="bg-white rounded-xl border border-gray-200 p-6 shadow-sm">
+        <div className="glow-panel p-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* Search */}
             <div>
@@ -200,7 +200,7 @@ export default function UserManagement() {
         </div>
 
         {/* Users Table */}
-        <div className="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden">
+        <div className="glow-panel overflow-hidden">
           <div className="overflow-x-auto">
             <table className="w-full">
               <thead className="bg-gray-50">
@@ -226,7 +226,7 @@ export default function UserManagement() {
                 {filteredUsers.map((user) => (
                   <tr
                     key={user.id}
-                    className="hover:bg-gray-50 transition-colors"
+                    className="hover:bg-purple-50/80 transition-colors"
                   >
                     <td className="px-6 py-4 whitespace-nowrap">
                       <div className="flex items-center">

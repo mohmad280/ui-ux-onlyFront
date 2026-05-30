@@ -86,10 +86,10 @@ export default function Navbar() {
                   </div>
 
                   {/* Logout */}
-                  <button
-                    onClick={handleLogout}
-                    className="text-gray-700 hover:text-red-600 font-medium text-sm transition-colors"
-                  >
+              <button
+                onClick={handleLogout}
+                    className="text-gray-700 hover:text-red-600 font-medium text-sm transition-colors glow-link"
+              >
                     Logout
                   </button>
                 </>
@@ -113,7 +113,7 @@ export default function Navbar() {
               {/* Mobile Menu Button */}
               <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="md:hidden p-2 rounded-lg text-gray-600 hover:bg-gray-100"
+                className="md:hidden p-2 rounded-lg text-gray-600 hover:bg-white/70 hover:shadow-glow-purple transition-all"
               >
                 <svg
                   className="w-6 h-6"
@@ -139,17 +139,17 @@ export default function Navbar() {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden bg-white border-t border-gray-200">
+          <div className="md:hidden bg-white/95 backdrop-blur-xl border-t border-purple-100">
             <div className="px-4 py-6 space-y-4">
               <Link
                 to="/"
-                className="block py-2 font-medium text-gray-700 hover:text-purple-700"
+                className="block py-2 font-medium text-gray-700 hover:text-purple-700 glow-link"
               >
                 Home
               </Link>
               <Link
                 to="/courses"
-                className="block py-2 font-medium text-gray-700 hover:text-purple-700"
+                className="block py-2 font-medium text-gray-700 hover:text-purple-700 glow-link"
               >
                 Courses
               </Link>
@@ -172,7 +172,7 @@ export default function Navbar() {
                     </div>
                     <Link
                       to={`/${user.role}/dashboard`}
-                      className="block w-full bg-purple-600 text-white text-center py-2 rounded-lg font-medium hover:bg-purple-700 mt-3"
+                      className="block w-full glow-btn text-center py-2 rounded-lg font-medium mt-3"
                     >
                       Dashboard
                     </Link>
@@ -188,13 +188,13 @@ export default function Navbar() {
                 <div className="pt-4 border-t border-gray-200 space-y-3">
                   <Link
                     to="/login"
-                    className="block w-full text-center py-2 text-gray-700 font-medium border border-gray-300 rounded-lg hover:bg-gray-50"
+                    className="block w-full text-center py-2 text-gray-700 font-medium border border-purple-100 rounded-lg hover:bg-purple-50 hover:shadow-glow-purple transition-all"
                   >
                     Login
                   </Link>
                   <Link
                     to="/signup"
-                    className="block w-full text-center py-2 bg-purple-600 text-white font-medium rounded-lg hover:bg-purple-700"
+                    className="block w-full text-center py-2 glow-btn font-medium rounded-lg"
                   >
                     Sign Up
                   </Link>

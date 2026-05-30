@@ -70,7 +70,7 @@ export default function CourseViewer() {
     // Image files
     if (["jpg", "jpeg", "png", "gif", "webp"].includes(fileType)) {
       return (
-        <div className="bg-white border border-gray-200 rounded-2xl p-4">
+        <div className="glow-panel p-4">
           <div className="flex justify-center">
             <img
               src={mediaUrl}
@@ -112,7 +112,7 @@ export default function CourseViewer() {
     // Video files
     else if (["mp4", "webm", "mov", "avi"].includes(fileType)) {
       return (
-        <div className="bg-white border border-gray-200 rounded-2xl p-4">
+        <div className="glow-panel p-4">
           <div className="rounded-2xl overflow-hidden bg-black">
             <video
               controls
@@ -155,7 +155,7 @@ export default function CourseViewer() {
     // PDF files
     else if (fileType === "pdf") {
       return (
-        <div className="bg-white border border-gray-200 rounded-2xl p-6">
+        <div className="glow-panel p-6">
           <div className="flex flex-col items-center justify-center p-4 bg-gray-50 rounded-xl">
             <svg
               className="w-16 h-16 text-red-500 mb-4"
@@ -202,7 +202,7 @@ export default function CourseViewer() {
     // Other files
     else {
       return (
-        <div className="bg-white border border-gray-200 rounded-2xl p-6">
+        <div className="glow-panel p-6">
           <div className="flex flex-col items-center justify-center p-4 bg-gray-50 rounded-xl">
             <svg
               className="w-16 h-16 text-gray-500 mb-4"
@@ -393,7 +393,7 @@ export default function CourseViewer() {
         <div className="grid grid-cols-1 xl:grid-cols-4 gap-8">
           {/* Lessons Sidebar */}
           <div className="xl:col-span-1">
-            <div className="bg-white/80 backdrop-blur-sm rounded-3xl shadow-lg border border-gray-200/60 p-6 sticky top-24">
+            <div className="glow-panel rounded-3xl p-6 sticky top-24">
               <h3 className="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
                 <span>📋</span>
                 Course Content
@@ -469,7 +469,7 @@ export default function CourseViewer() {
           {/* Lesson Content */}
           <div className="xl:col-span-3">
             {activeLesson ? (
-              <div className="bg-white/80 backdrop-blur-sm rounded-3xl shadow-lg border border-gray-200/60 overflow-hidden">
+              <div className="glow-panel rounded-3xl overflow-hidden">
                 {/* Lesson Header */}
                 <div className="bg-gradient-to-r from-gray-50 to-purple-50/50 p-6 border-b border-gray-200/60">
                   <div className="flex items-center gap-3 mb-2">
@@ -571,7 +571,7 @@ export default function CourseViewer() {
                 </div>
               </div>
             ) : (
-              <div className="bg-white/80 backdrop-blur-sm rounded-3xl shadow-lg border border-gray-200/60 p-12 text-center">
+              <div className="glow-panel rounded-3xl p-12 text-center">
                 <div className="text-6xl mb-4">📚</div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">
                   Select a Lesson

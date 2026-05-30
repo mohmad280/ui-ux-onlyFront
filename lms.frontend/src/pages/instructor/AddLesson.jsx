@@ -48,7 +48,7 @@ export default function AddLesson() {
   return (
     <InstructorLayout>
       <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-6">
+        <div className="glow-panel p-6">
           <div className="mb-6">
             <h1 className="text-2xl font-bold text-gray-900">Add New Lesson</h1>
             <p className="text-gray-600 mt-2">
@@ -140,7 +140,7 @@ export default function AddLesson() {
               <button
                 type="submit"
                 disabled={loading}
-                className="flex-1 bg-gradient-to-r from-green-500 to-emerald-600 text-white py-3 px-4 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="flex-1 bg-gradient-to-r from-purple-600 to-glowPurple text-white py-3 px-4 rounded-lg font-semibold hover:shadow-glow-purple transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {loading ? "Adding Lesson..." : "Add Lesson"}
               </button>

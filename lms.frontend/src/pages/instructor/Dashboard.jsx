@@ -183,7 +183,7 @@ export default function InstructorDashboard() {
         {/* Admin Style */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {/* Total Courses Card */}
-          <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
+          <div className="glow-stat">
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-sm font-medium text-gray-600">
@@ -221,7 +221,7 @@ export default function InstructorDashboard() {
           </div>
 
           {/* Total Students Card */}
-          <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
+          <div className="glow-stat">
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-sm font-medium text-gray-600">
@@ -251,7 +251,7 @@ export default function InstructorDashboard() {
           </div>
 
           {/* Average Rating Card */}
-          <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
+          <div className="glow-stat">
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-sm font-medium text-gray-600">
@@ -281,7 +281,7 @@ export default function InstructorDashboard() {
           </div>
 
           {/* Total Earnings Card */}
-          <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
+          <div className="glow-stat">
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-sm font-medium text-gray-600">
@@ -312,7 +312,7 @@ export default function InstructorDashboard() {
         </div>
 
         {/*  Admin Style */}
-        <div className="bg-white rounded-xl border border-gray-200 shadow-sm">
+        <div className="glow-panel">
           <div className="p-6 border-b border-gray-200">
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
               <h2 className="text-xl font-semibold text-gray-900">
@@ -377,7 +377,7 @@ export default function InstructorDashboard() {
                 {courses.map((course) => (
                   <div
                     key={course.id}
-                    className="bg-white border border-gray-200 rounded-lg hover:shadow-md transition-all duration-300 overflow-hidden"
+                    className="glow-card overflow-hidden"
                   >
                     {/* Course Image */}
                     <div className="h-40 bg-gray-200 overflow-hidden">
@@ -447,7 +447,7 @@ export default function InstructorDashboard() {
                       <div className="flex gap-2">
                         <Link
                           to={`/instructor/courses/${course.id}`}
-                          className="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-700 py-2 px-3 rounded text-sm font-medium transition-colors text-center"
+                          className="flex-1 bg-purple-50 hover:bg-purple-100 hover:shadow-glow-purple text-purple-700 py-2 px-3 rounded text-sm font-medium transition-all text-center"
                         >
                           Manage
                         </Link>

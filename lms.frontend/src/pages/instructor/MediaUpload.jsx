@@ -256,7 +256,7 @@ export default function MediaUpload() {
   return (
     <InstructorLayout>
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-6">
+        <div className="glow-panel p-6">
           {/* Header */}
           <div className="mb-8">
             <h1 className="text-2xl font-bold text-gray-900">Upload Media</h1>
@@ -341,7 +341,7 @@ export default function MediaUpload() {
 
             {/* File Preview */}
             {selectedFile && (
-              <div className="bg-gray-50 rounded-xl p-6">
+              <div className="bg-purple-50/70 rounded-xl p-6">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-4">
                     {getFileIcon(getFileType(selectedFile.name))}
@@ -417,7 +417,7 @@ export default function MediaUpload() {
               <button
                 onClick={handleUpload}
                 disabled={!selectedFile || !selectedLessonId || uploading}
-                className="flex-1 bg-gradient-to-r from-green-500 to-emerald-600 text-white py-3 px-4 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="flex-1 bg-gradient-to-r from-purple-600 to-glowPurple text-white py-3 px-4 rounded-lg font-semibold hover:shadow-glow-purple transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {uploading ? (
                   <span className="flex items-center justify-center">

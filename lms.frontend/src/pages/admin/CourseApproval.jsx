@@ -243,7 +243,7 @@ export default function CourseApproval() {
           </div>
           <button
             onClick={() => setShowAddCourse(true)}
-            className="mt-4 sm:mt-0 bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-medium transition-colors shadow-sm hover:shadow-md flex items-center gap-2"
+            className="mt-4 sm:mt-0 glow-btn px-6 py-3 rounded-lg font-medium flex items-center gap-2"
           >
             <svg
               className="w-5 h-5"
@@ -264,25 +264,25 @@ export default function CourseApproval() {
 
         {/* Stats */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-          <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+          <div className="glow-stat">
             <div className="text-2xl font-bold text-gray-900">
               {courses.length}
             </div>
             <div className="text-sm text-gray-600">Total Courses</div>
           </div>
-          <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+          <div className="glow-stat">
             <div className="text-2xl font-bold text-gray-900">
               {pendingCourses.length}
             </div>
             <div className="text-sm text-gray-600">Pending Approval</div>
           </div>
-          <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+          <div className="glow-stat">
             <div className="text-2xl font-bold text-gray-900">
               {approvedCourses.length}
             </div>
             <div className="text-sm text-gray-600">Approved</div>
           </div>
-          <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+          <div className="glow-stat">
             <div className="text-2xl font-bold text-gray-900">
               {courses.filter((c) => c.lessons && c.lessons.length > 0).length}
             </div>
@@ -291,7 +291,7 @@ export default function CourseApproval() {
         </div>
 
         {/* Tabs */}
-        <div className="bg-white rounded-xl border border-gray-200 p-1 shadow-sm">
+        <div className="glow-panel p-1">
           <div className="flex space-x-1">
             <button
               onClick={() => setActiveTab("pending")}
@@ -322,7 +322,7 @@ export default function CourseApproval() {
             (course) => (
               <div
                 key={course.id}
-                className="bg-white rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden"
+                className="glow-card overflow-hidden"
               >
                 {/* Course Header */}
                 <div
@@ -350,25 +350,25 @@ export default function CourseApproval() {
                   </p>
 
                   <div className="grid grid-cols-2 gap-3 mb-4">
-                    <div className="text-center bg-gray-50 rounded-lg p-3">
+                    <div className="text-center bg-purple-50/70 rounded-lg p-3">
                       <div className="text-xs text-gray-500 mb-1">Price</div>
                       <div className="text-sm font-semibold text-gray-900">
                         {formatJOD(course.price || 0)}
                       </div>
                     </div>
-                    <div className="text-center bg-gray-50 rounded-lg p-3">
+                    <div className="text-center bg-purple-50/70 rounded-lg p-3">
                       <div className="text-xs text-gray-500 mb-1">Duration</div>
                       <div className="text-sm font-semibold text-gray-900">
                         {course.duration || 0}h
                       </div>
                     </div>
-                    <div className="text-center bg-gray-50 rounded-lg p-3">
+                    <div className="text-center bg-purple-50/70 rounded-lg p-3">
                       <div className="text-xs text-gray-500 mb-1">Level</div>
                       <div className="text-sm font-semibold text-gray-900">
                         {course.level || "Beginner"}
                       </div>
                     </div>
-                    <div className="text-center bg-gray-50 rounded-lg p-3">
+                    <div className="text-center bg-purple-50/70 rounded-lg p-3">
                       <div className="text-xs text-gray-500 mb-1">Students</div>
                       <div className="text-sm font-semibold text-gray-900">
                         {course.totalStudents || 0}
@@ -468,7 +468,7 @@ export default function CourseApproval() {
         {/* Empty State */}
         {(activeTab === "pending" ? pendingCourses : approvedCourses).length ===
           0 && (
-          <div className="text-center py-12 bg-white rounded-xl border border-gray-200">
+          <div className="glow-panel text-center py-12">
             <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
               <svg
                 className="w-8 h-8 text-gray-400"
@@ -500,7 +500,7 @@ export default function CourseApproval() {
         {/* Add Course Modal */}
         {showAddCourse && (
           <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-            <div className="bg-white rounded-xl w-full max-w-2xl p-6 max-h-[90vh] overflow-y-auto">
+            <div className="glow-panel w-full max-w-2xl p-6 max-h-[90vh] overflow-y-auto">
               <h3 className="text-xl font-bold mb-4">Add New Course</h3>
 
               <div className="space-y-4">
@@ -643,7 +643,7 @@ export default function CourseApproval() {
               <div className="flex gap-3 mt-6">
                 <button
                   onClick={handleAddCourse}
-                  className="flex-1 bg-purple-600 hover:bg-purple-700 text-white py-3 rounded-lg font-medium transition-colors"
+                  className="flex-1 glow-btn py-3 rounded-lg font-medium"
                 >
                   Add Course
                 </button>
@@ -661,7 +661,7 @@ export default function CourseApproval() {
         {/* Edit Course Modal */}
         {showEditModal && editingCourse && (
           <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-            <div className="bg-white rounded-xl w-full max-w-2xl p-6 max-h-[90vh] overflow-y-auto">
+            <div className="glow-panel w-full max-w-2xl p-6 max-h-[90vh] overflow-y-auto">
               <h3 className="text-xl font-bold mb-4">Edit Course</h3>
 
               <div className="space-y-4">
@@ -813,7 +813,7 @@ export default function CourseApproval() {
               <div className="flex gap-3 mt-6">
                 <button
                   onClick={handleUpdateCourse}
-                  className="flex-1 bg-purple-600 hover:bg-purple-700 text-white py-3 rounded-lg font-medium transition-colors"
+                  className="flex-1 glow-btn py-3 rounded-lg font-medium"
                 >
                   Update Course
                 </button>

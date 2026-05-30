@@ -114,7 +114,7 @@ export default function AdminDashboard() {
           </div>
           <button
             onClick={() => setShowAddUser(true)}
-            className="mt-4 sm:mt-0 bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-medium transition-colors shadow-sm hover:shadow-md flex items-center gap-2"
+            className="mt-4 sm:mt-0 glow-btn px-6 py-3 rounded-lg font-medium flex items-center gap-2"
           >
             <svg
               className="w-5 h-5"
@@ -136,7 +136,7 @@ export default function AdminDashboard() {
         {/* Stats Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {/* Total Users Card */}
-          <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
+          <div className="glow-stat">
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-sm font-medium text-gray-600">Total Users</p>
@@ -163,7 +163,7 @@ export default function AdminDashboard() {
           </div>
 
           {/* Total Enrollments Card */}
-          <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
+          <div className="glow-stat">
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-sm font-medium text-gray-600">
@@ -193,7 +193,7 @@ export default function AdminDashboard() {
 
           {/* Total Courses Card */}
           <div
-            className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow cursor-pointer"
+            className="glow-stat cursor-pointer"
             onClick={() => navigate("/admin/courses")}
           >
             <div className="flex items-center justify-between">
@@ -225,7 +225,7 @@ export default function AdminDashboard() {
 
           {/* Pending Approvals Card */}
           <div
-            className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow cursor-pointer"
+            className="glow-stat cursor-pointer"
             onClick={() => navigate("/admin/courses")}
           >
             <div className="flex items-center justify-between">
@@ -266,7 +266,7 @@ export default function AdminDashboard() {
         {/* Quick Actions */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           {/* Quick Actions */}
-          <div className="bg-white rounded-xl border border-gray-200 p-6 shadow-sm">
+          <div className="glow-panel p-6">
             <h3 className="text-lg font-semibold text-gray-900 mb-4">
               Quick Actions
             </h3>
@@ -274,7 +274,7 @@ export default function AdminDashboard() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <button
                 onClick={() => navigate("/admin/users")}
-                className="p-4 text-left border border-gray-200 rounded-lg hover:border-purple-500 hover:bg-purple-50 transition-all duration-200"
+                className="glow-action p-4 text-left border border-purple-100 rounded-lg hover:bg-purple-50"
               >
                   <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center mb-3">
                   <svg
@@ -297,7 +297,7 @@ export default function AdminDashboard() {
 
               <button
                 onClick={() => navigate("/admin/courses")}
-                className="p-4 text-left border border-gray-200 rounded-lg hover:border-green-500 hover:bg-green-50 transition-all duration-200"
+                className="glow-action p-4 text-left border border-purple-100 rounded-lg hover:bg-purple-50"
               >
                 <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center mb-3">
                   <svg
@@ -322,7 +322,7 @@ export default function AdminDashboard() {
 
               <button
                 onClick={() => setShowAddUser(true)}
-                className="p-4 text-left border border-gray-200 rounded-lg hover:border-purple-500 hover:bg-purple-50 transition-all duration-200"
+                className="glow-action p-4 text-left border border-purple-100 rounded-lg hover:bg-purple-50"
               >
                 <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center mb-3">
                   <svg
@@ -345,7 +345,7 @@ export default function AdminDashboard() {
 
               <button
                 onClick={() => navigate("/admin/courses")}
-                className="p-4 text-left border border-gray-200 rounded-lg hover:border-yellow-500 hover:bg-yellow-50 transition-all duration-200"
+                className="glow-action p-4 text-left border border-purple-100 rounded-lg hover:bg-purple-50"
               >
                 <div className="w-10 h-10 bg-yellow-100 rounded-lg flex items-center justify-center mb-3">
                   <svg
@@ -369,7 +369,7 @@ export default function AdminDashboard() {
           </div>
 
           {/* Recent Activity - Real Data */}
-          <div className="bg-white rounded-xl border border-gray-200 p-6 shadow-sm">
+          <div className="glow-panel p-6">
             <div className="flex items-center justify-between mb-4">
               <h3 className="text-lg font-semibold text-gray-900">
                 Recent Activity
@@ -384,7 +384,7 @@ export default function AdminDashboard() {
                 recentActivities.map((activity, index) => (
                   <div
                     key={index}
-                    className="flex items-start gap-4 p-3 rounded-lg hover:bg-gray-50 transition-colors duration-200"
+                    className="flex items-start gap-4 p-3 rounded-lg hover:bg-purple-50 hover:shadow-glow-purple transition-all duration-200"
                   >
                     <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center mt-1">
                       <svg
@@ -436,7 +436,7 @@ export default function AdminDashboard() {
         {/* Add User Modal */}
         {showAddUser && (
           <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-            <div className="bg-white rounded-xl w-full max-w-md p-6">
+            <div className="glow-panel w-full max-w-md p-6">
               <h3 className="text-xl font-bold mb-4">Add New User</h3>
 
               <div className="space-y-4">
@@ -506,7 +506,7 @@ export default function AdminDashboard() {
               <div className="flex gap-3 mt-6">
                 <button
                   onClick={handleAddUser}
-                  className="flex-1 bg-purple-600 hover:bg-purple-700 text-white py-3 rounded-lg font-medium transition-colors"
+                  className="flex-1 glow-btn py-3 rounded-lg font-medium"
                 >
                   Add User
                 </button>

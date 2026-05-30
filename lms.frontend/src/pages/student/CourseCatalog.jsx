@@ -66,7 +66,7 @@ export default function CourseCatalog() {
     <StudentLayout>
       {/* Enhanced Header */}
       <div className="text-center lg:text-left mb-12">
-        <div className="inline-flex items-center gap-3 px-4 py-2 bg-white/80 rounded-2xl shadow-sm border border-gray-200/60 mb-6">
+        <div className="inline-flex items-center gap-3 px-4 py-2 bg-white/85 rounded-2xl shadow-sm border border-purple-100/70 mb-6">
           <span className="text-2xl">🎯</span>
           <span className="text-sm text-gray-600">Discover new skills</span>
         </div>
@@ -84,7 +84,7 @@ export default function CourseCatalog() {
         {courses.map((course) => (
           <div
             key={course.id}
-            className="group bg-white/80 backdrop-blur-sm rounded-3xl shadow-lg border border-gray-200/60 overflow-hidden hover:shadow-2xl hover:scale-105 transition-all duration-500"
+            className="glow-card group relative rounded-3xl overflow-hidden"
           >
             {/* Course Image/Thumbnail */}
             <div className="h-48 bg-gradient-to-br from-purple-500/20 to-glowPurple/20 relative overflow-hidden">
@@ -146,7 +146,7 @@ export default function CourseCatalog() {
                   )}
                 </button>
 
-                <button className="px-4 py-3 border border-gray-300 text-gray-700 rounded-xl hover:bg-gray-50 hover:border-gray-400 transition-all duration-300 group/info">
+                <button className="px-4 py-3 border border-purple-100 text-gray-700 rounded-xl hover:bg-purple-50 hover:shadow-glow-purple transition-all duration-300 group/info">
                   <span className="group-hover/info:scale-110 transition-transform">
                     ℹ️
                   </span>

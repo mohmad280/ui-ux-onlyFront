@@ -100,18 +100,11 @@ export default function Signup() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-50 via-white to-glowPurple/20 p-4">
-      {/* Background Decorations */}
-      <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-pulse"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-pulse animation-delay-2000"></div>
-        <div className="absolute top-40 left-1/2 w-80 h-80 bg-cyan-200 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-pulse animation-delay-4000"></div>
-      </div>
-
+    <div className="min-h-screen flex items-center justify-center edu-page-shell p-4">
       {/* Main Signup Container */}
       <div className="relative w-full max-w-4xl">
         {/* Signup Card with Two Columns */}
-        <div className="bg-white rounded-3xl shadow-2xl overflow-hidden transform hover:scale-[1.01] transition-all duration-300">
+        <div className="glow-panel overflow-hidden transform hover:scale-[1.01]">
           <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[700px]">
             {/* Left Column - Student Benefits */}
             <div className="bg-gradient-to-br from-purple-600 to-glowPurple p-8 text-white">
@@ -171,7 +164,7 @@ export default function Signup() {
                   ].map((benefit, index) => (
                     <div
                       key={index}
-                      className="flex items-center gap-4 p-3 bg-white/10 rounded-xl backdrop-blur-sm"
+                      className="flex items-center gap-4 p-3 bg-white/10 rounded-xl backdrop-blur-sm hover:bg-white/20 hover:shadow-glow-purple transition-all duration-300"
                     >
                       <div className="text-2xl">{benefit.icon}</div>
                       <div>
@@ -284,7 +277,7 @@ export default function Signup() {
                         value={form.username}
                         onChange={handleChange}
                         required
-                        className="block w-full pl-10 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all duration-200 bg-white/50"
+                        className="block w-full pl-10 pr-4 py-3 border border-purple-100 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all duration-200 bg-white/70"
                         placeholder="Choose a username"
                       />
                     </div>
@@ -317,7 +310,7 @@ export default function Signup() {
                         value={form.email}
                         onChange={handleChange}
                         required
-                        className="block w-full pl-10 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all duration-200 bg-white/50"
+                        className="block w-full pl-10 pr-4 py-3 border border-purple-100 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all duration-200 bg-white/70"
                         placeholder="Enter your email address"
                       />
                     </div>
@@ -359,7 +352,7 @@ export default function Signup() {
                         value={form.password}
                         onChange={handleChange}
                         required
-                        className="block w-full pl-10 pr-12 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all duration-200 bg-white/50"
+                        className="block w-full pl-10 pr-12 py-3 border border-purple-100 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all duration-200 bg-white/70"
                         placeholder="Create a strong password"
                       />
                     </div>
@@ -430,7 +423,7 @@ export default function Signup() {
                   <button
                     type="submit"
                     disabled={isLoading || !agreedToTerms}
-                    className="w-full bg-gradient-to-r from-purple-600 to-glowPurple text-white py-4 px-4 rounded-xl font-semibold hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 transform hover:-translate-y-0.5 flex items-center justify-center gap-3"
+                    className="w-full bg-gradient-to-r from-purple-600 to-glowPurple text-white py-4 px-4 rounded-xl font-semibold hover:shadow-glow-purple disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 transform hover:-translate-y-0.5 flex items-center justify-center gap-3"
                   >
                     {isLoading ? (
                       <>
@@ -447,7 +440,7 @@ export default function Signup() {
                 </form>
 
                 {/* Security Note */}
-                <div className="mt-6 p-3 bg-gray-50 rounded-xl border border-gray-200">
+                <div className="mt-6 p-3 bg-purple-50 rounded-xl border border-purple-100">
                   <div className="flex items-center gap-2 justify-center">
                     <svg
                       className="w-4 h-4 text-green-600"

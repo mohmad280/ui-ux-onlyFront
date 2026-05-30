@@ -77,13 +77,13 @@ export default function EnrolledStudents() {
 
         {/* Stats */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-          <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-200">
+          <div className="glow-stat rounded-2xl">
             <p className="text-sm font-medium text-gray-600">Total Students</p>
             <p className="text-3xl font-bold text-gray-900 mt-2">
               {students.length}
             </p>
           </div>
-          <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-200">
+          <div className="glow-stat rounded-2xl">
             <p className="text-sm font-medium text-gray-600">Avg. Progress</p>
             <p className="text-3xl font-bold text-gray-900 mt-2">
               {students.length > 0
@@ -97,13 +97,13 @@ export default function EnrolledStudents() {
               %
             </p>
           </div>
-          <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-200">
+          <div className="glow-stat rounded-2xl">
             <p className="text-sm font-medium text-gray-600">Completed</p>
             <p className="text-3xl font-bold text-gray-900 mt-2">
               {students.filter((s) => s.progress === 100).length}
             </p>
           </div>
-          <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-200">
+          <div className="glow-stat rounded-2xl">
             <p className="text-sm font-medium text-gray-600">Active</p>
             <p className="text-3xl font-bold text-gray-900 mt-2">
               {
@@ -115,7 +115,7 @@ export default function EnrolledStudents() {
         </div>
 
         {/* Students Table */}
-        <div className="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden">
+        <div className="glow-panel overflow-hidden">
           <div className="p-6 border-b border-gray-200">
             <h2 className="text-xl font-semibold text-gray-900">
               Student List
@@ -152,7 +152,7 @@ export default function EnrolledStudents() {
                   </tr>
                 ) : (
                   students.map((student) => (
-                    <tr key={student.id} className="hover:bg-gray-50">
+                    <tr key={student.id} className="hover:bg-purple-50/80">
                       <td className="px-6 py-4 whitespace-nowrap">
                         <div>
                           <div className="text-sm font-medium text-gray-900">

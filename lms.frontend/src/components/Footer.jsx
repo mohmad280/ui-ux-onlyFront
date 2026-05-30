@@ -2,8 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 export default function Footer() {
-  const currentYear = new Date().getFullYear();
-
   const footerSections = [
     {
       title: "Platform",
@@ -65,33 +63,10 @@ export default function Footer() {
         </div>
 
         {/* Bottom Footer */}
-        <div className="border-t border-gray-200 mt-8 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            {/* Copyright */}
-            <div className="text-gray-700 text-sm">
+        <div className="border-t border-purple-100 mt-8 pt-8">
+          <div className="flex justify-center items-center">
+            <div className="text-gray-700 text-sm font-medium">
               Website created by Salsaabiel Derbas and Mohammad Ghanem
-            </div>
-
-            {/* Legal Links */}
-            <div className="flex items-center space-x-6 text-sm">
-              <Link
-                to="/privacy"
-                className="text-gray-500 hover:text-purple-600 transition-colors"
-              >
-                Privacy
-              </Link>
-              <Link
-                to="/terms"
-                className="text-gray-500 hover:text-purple-600 transition-colors"
-              >
-                Terms
-              </Link>
-              <Link
-                to="/contact"
-                className="text-gray-500 hover:text-purple-600 transition-colors"
-              >
-                Contact
-              </Link>
             </div>
           </div>
         </div>

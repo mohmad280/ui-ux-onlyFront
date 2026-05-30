@@ -51,7 +51,7 @@ export default function StudentLessonView() {
     // Image files
     if (["jpg", "jpeg", "png", "gif", "webp"].includes(fileType)) {
       return (
-        <div className="bg-white border border-gray-200 rounded-lg p-4">
+        <div className="glow-panel p-4">
           <h3 className="text-lg font-semibold text-gray-900 mb-3">
             Attached Image
           </h3>
@@ -80,7 +80,7 @@ export default function StudentLessonView() {
     // Video files
     else if (["mp4", "webm", "mov", "avi"].includes(fileType)) {
       return (
-        <div className="bg-white border border-gray-200 rounded-lg p-4">
+        <div className="glow-panel p-4">
           <h3 className="text-lg font-semibold text-gray-900 mb-3">
             Attached Video
           </h3>
@@ -109,7 +109,7 @@ export default function StudentLessonView() {
     // PDF files
     else if (fileType === "pdf") {
       return (
-        <div className="bg-white border border-gray-200 rounded-lg p-4">
+        <div className="glow-panel p-4">
           <h3 className="text-lg font-semibold text-gray-900 mb-3">
             Attached Document
           </h3>
@@ -158,7 +158,7 @@ export default function StudentLessonView() {
     // Other files
     else {
       return (
-        <div className="bg-white border border-gray-200 rounded-lg p-4">
+        <div className="glow-panel p-4">
           <h3 className="text-lg font-semibold text-gray-900 mb-3">
             Attached File
           </h3>
@@ -233,7 +233,7 @@ export default function StudentLessonView() {
     <StudentLayout>
       <div className="max-w-4xl mx-auto p-6">
         {/* Lesson Content */}
-        <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-6">
+        <div className="glow-panel p-6 mb-6">
           <h1 className="text-2xl font-bold text-gray-900 mb-4">
             {lesson.title}
           </h1>
@@ -243,7 +243,7 @@ export default function StudentLessonView() {
         </div>
 
         {/* Media Display Section */}
-        <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+        <div className="glow-panel p-6">
           <h2 className="text-xl font-semibold text-gray-900 mb-4">
             Lesson Media
           </h2>

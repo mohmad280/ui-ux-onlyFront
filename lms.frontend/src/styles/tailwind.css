@@ -5,7 +5,13 @@
 
 /* Custom reusable classes */
 .btn-primary {
-  @apply bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition;
+  @apply bg-gradient-to-r from-purple-600 to-glowPurple text-white px-4 py-2 rounded-lg transition-all duration-300;
+  box-shadow: 0 8px 24px rgba(139, 92, 246, 0.14);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 36px rgba(139, 92, 246, 0.28), 0 0 0 1px rgba(167, 139, 250, 0.45);
 }
 
 .btn-secondary {
@@ -13,7 +19,12 @@
 }
 
 .card {
-  @apply bg-white shadow-md rounded-xl p-4 border border-gray-100;
+  @apply bg-white/90 backdrop-blur-sm shadow-md rounded-xl p-4 border border-purple-100/70 transition-all duration-300;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 48px rgba(139, 92, 246, 0.18), 0 0 0 1px rgba(167, 139, 250, 0.35);
 }
 
 .input {
@@ -22,27 +33,56 @@
 
 /* Glowing purple theme utilities */
 .glow-btn {
-  @apply bg-glowPurple text-white px-4 py-2 rounded-lg transition transform hover:-translate-y-0.5;
-  box-shadow: 0 6px 20px rgba(139,92,246,0.12);
+  @apply bg-gradient-to-r from-purple-600 to-glowPurple text-white px-4 py-2 rounded-lg transition-all duration-300 transform hover:-translate-y-0.5;
+  box-shadow: 0 8px 24px rgba(139, 92, 246, 0.16);
 }
 
 .glow-btn:hover {
-  box-shadow: 0 10px 40px rgba(139,92,246,0.22), 0 4px 10px rgba(139,92,246,0.08);
+  box-shadow: 0 16px 44px rgba(139, 92, 246, 0.32), 0 0 0 1px rgba(216, 180, 254, 0.55);
 }
 
 .glow-card {
-  @apply bg-white rounded-2xl border border-transparent transition-all duration-300 transform;
-  box-shadow: 0 6px 20px rgba(139,92,246,0.06);
+  @apply bg-white/90 backdrop-blur-sm rounded-2xl border border-purple-100/70 transition-all duration-300 transform;
+  box-shadow: 0 8px 24px rgba(139, 92, 246, 0.08);
 }
 
 .glow-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 20px 50px rgba(139,92,246,0.18), 0 6px 18px rgba(139,92,246,0.08);
-  border-color: rgba(139,92,246,0.12);
+  box-shadow: 0 24px 58px rgba(139, 92, 246, 0.22), 0 0 0 1px rgba(167, 139, 250, 0.45);
+  border-color: rgba(139, 92, 246, 0.28);
 }
 
 .glow-link:hover {
   text-decoration: none;
-  text-shadow: 0 0 10px rgba(139,92,246,0.18);
+  text-shadow: 0 0 16px rgba(139, 92, 246, 0.42);
   color: #6d28d9;
+}
+
+.glow-panel {
+  @apply bg-white/90 backdrop-blur-xl rounded-2xl border border-purple-100/70 shadow-sm transition-all duration-300;
+  box-shadow: 0 12px 34px rgba(139, 92, 246, 0.08);
+}
+
+.glow-panel:hover {
+  box-shadow: 0 22px 52px rgba(139, 92, 246, 0.16), 0 0 0 1px rgba(167, 139, 250, 0.28);
+}
+
+.glow-stat {
+  @apply bg-white/90 backdrop-blur-sm rounded-xl border border-purple-100/70 p-6 transition-all duration-300;
+  box-shadow: 0 10px 28px rgba(139, 92, 246, 0.08);
+}
+
+.glow-stat:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 22px 48px rgba(139, 92, 246, 0.2), 0 0 0 1px rgba(167, 139, 250, 0.4);
+}
+
+.glow-action {
+  @apply transition-all duration-300;
+}
+
+.glow-action:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 36px rgba(139, 92, 246, 0.18), 0 0 0 1px rgba(167, 139, 250, 0.32);
+  border-color: rgba(139, 92, 246, 0.35);
 }

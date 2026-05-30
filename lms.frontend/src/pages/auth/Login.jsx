@@ -76,7 +76,7 @@ export default function Login() {
         title: "Student Login",
         description: "Access your courses and continue learning",
         icon: "🎓",
-        gradient: "from-purple-500 to-glowPurple",
+        gradient: "from-purple-600 to-glowPurple",
         testEmail: "rohit@lms.com",
         testPassword: "rohit",
       },
@@ -84,7 +84,7 @@ export default function Login() {
         title: "Instructor Login",
         description: "Manage your courses and students",
         icon: "👨‍🏫",
-        gradient: "from-green-500 to-teal-500",
+        gradient: "from-purple-600 to-glowPurple",
         testEmail: "rahul.ins@lms.com",
         testPassword: "rahul",
       },
@@ -92,7 +92,7 @@ export default function Login() {
         title: "Admin Login",
         description: "Manage platform and users",
         icon: "⚙️",
-        gradient: "from-purple-500 to-pink-500",
+        gradient: "from-purple-600 to-glowPurple",
         testEmail: "rachit.adm@lms.com",
         testPassword: "rachit",
       },
@@ -103,18 +103,11 @@ export default function Login() {
   const currentRole = getRoleDetails(selectedRole);
 
   return (
-    <div className="min-h-screen flex items-center justify-center glow-bg p-4">
-      {/* Background Decorations */}
-      <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-pulse"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-pulse animation-delay-2000"></div>
-        <div className="absolute top-40 left-1/2 w-80 h-80 bg-cyan-200 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-pulse animation-delay-4000"></div>
-      </div>
-
+    <div className="min-h-screen flex items-center justify-center edu-page-shell p-4">
       {/* Main Login Container */}
       <div className="relative w-full max-w-6xl">
         {/* Login Card with Two Columns */}
-        <div className="bg-white rounded-3xl shadow-2xl overflow-hidden transform hover:scale-[1.01] transition-all duration-300">
+        <div className="glow-panel overflow-hidden transform hover:scale-[1.01]">
           <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[600px]">
             {/* Left Column - Role Selection */}
             <div className="bg-gradient-to-br from-purple-600 to-glowPurple p-8 text-white">
@@ -144,7 +137,7 @@ export default function Login() {
                       <button
                         key={role}
                         onClick={() => setSelectedRole(role)}
-                        className={`w-full p-4 rounded-xl text-left transition-all duration-300 transform hover:scale-105 ${
+                        className={`w-full p-4 rounded-xl text-left transition-all duration-300 transform hover:-translate-y-1 hover:shadow-glow-purple ${
                           isSelected
                             ? "bg-white/20 backdrop-blur-sm border-2 border-white/30 shadow-lg"
                             : "bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/15"
@@ -332,7 +325,7 @@ export default function Login() {
                   <button
                     type="submit"
                     disabled={isLoading}
-                    className={`w-full bg-gradient-to-r ${currentRole.gradient} text-white py-4 px-4 rounded-xl font-semibold hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 transform hover:-translate-y-0.5 flex items-center justify-center gap-3`}
+                    className={`w-full bg-gradient-to-r ${currentRole.gradient} text-white py-4 px-4 rounded-xl font-semibold hover:shadow-glow-purple disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 transform hover:-translate-y-0.5 flex items-center justify-center gap-3`}
                   >
                     {isLoading ? (
                       <>

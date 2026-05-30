@@ -75,7 +75,7 @@ export default function InstructorLayout({ children }) {
   ];
 
   return (
-    <div className="min-h-screen glow-bg flex">
+    <div className="min-h-screen edu-page-shell flex">
       {/* Mobile Sidebar Overlay */}
       {isSidebarOpen && (
         <div
@@ -88,7 +88,7 @@ export default function InstructorLayout({ children }) {
       <aside
         className={`
         fixed lg:static inset-y-0 left-0 z-50
-        w-64 bg-white border-r border-gray-200
+        w-64 bg-white/95 backdrop-blur-xl border-r border-purple-100/70
         transform transition-transform duration-300
         ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"}
         lg:translate-x-0 flex flex-col
@@ -120,7 +120,7 @@ export default function InstructorLayout({ children }) {
                 ${
                   location.pathname === item.path
                     ? "bg-purple-50 text-purple-700 border-r-2 border-purple-600 shadow-sm"
-                      : "text-gray-700 hover:bg-white hover:text-gray-900"
+                      : "text-gray-700 hover:bg-white hover:text-purple-700 hover:shadow-glow-purple"
                 }
               `}
               onClick={() => setIsSidebarOpen(false)}
@@ -177,7 +177,7 @@ export default function InstructorLayout({ children }) {
       {/* Main Content */}
       <main className="flex-1 lg:ml-0 min-w-0">
         {/* Mobile Header */}
-        <header className="lg:hidden bg-white border-b border-gray-200 px-4 py-3 shadow-sm">
+        <header className="lg:hidden bg-white/90 backdrop-blur-xl border-b border-purple-100 px-4 py-3 shadow-sm">
           <div className="flex items-center justify-between">
             <button
               onClick={() => setIsSidebarOpen(true)}
@@ -243,7 +243,7 @@ export default function InstructorLayout({ children }) {
         </header>
 
         {/* Desktop Header */}
-        <header className="hidden lg:block bg-white border-b border-gray-200 px-6 py-4 shadow-sm">
+        <header className="hidden lg:block bg-white/90 backdrop-blur-xl border-b border-purple-100 px-6 py-4 shadow-sm">
           <div className="flex items-center justify-between">
             <div>
               <h1 className="text-2xl font-bold text-gray-900">

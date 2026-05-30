@@ -113,7 +113,7 @@ export default function CourseDetail() {
         </div>
 
         {/* Course Info */}
-        <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-6">
+        <div className="glow-panel p-6">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
             <div className="lg:col-span-2">
               <h2 className="text-xl font-semibold text-gray-900 mb-4">
@@ -155,26 +155,26 @@ export default function CourseDetail() {
               </div>
             </div>
 
-            <div className="bg-gray-50 rounded-lg p-4">
+            <div className="bg-purple-50/70 rounded-lg p-4">
               <h3 className="font-semibold text-gray-900 mb-3">
                 Quick Actions
               </h3>
               <div className="space-y-2">
                 <Link
                   to={`/instructor/courses/${id}/lessons/new`}
-                  className="block w-full text-center bg-white border border-gray-300 text-gray-700 py-2 px-4 rounded-lg text-sm font-medium hover:bg-gray-50 transition-colors"
+                  className="block w-full text-center bg-white border border-purple-100 text-gray-700 py-2 px-4 rounded-lg text-sm font-medium hover:bg-purple-50 hover:shadow-glow-purple transition-all"
                 >
                   Add Lessons
                 </Link>
                 <Link
                   to={`/instructor/courses/${id}/students`}
-                  className="block w-full text-center bg-white border border-gray-300 text-gray-700 py-2 px-4 rounded-lg text-sm font-medium hover:bg-gray-50 transition-colors"
+                  className="block w-full text-center bg-white border border-purple-100 text-gray-700 py-2 px-4 rounded-lg text-sm font-medium hover:bg-purple-50 hover:shadow-glow-purple transition-all"
                 >
                   View Enrollments
                 </Link>
                 <Link
                   to={`/instructor/courses/${id}/media`}
-                  className="block w-full text-center bg-white border border-gray-300 text-gray-700 py-2 px-4 rounded-lg text-sm font-medium hover:bg-gray-50 transition-colors"
+                  className="block w-full text-center bg-white border border-purple-100 text-gray-700 py-2 px-4 rounded-lg text-sm font-medium hover:bg-purple-50 hover:shadow-glow-purple transition-all"
                 >
                   Upload Media
                 </Link>
@@ -184,7 +184,7 @@ export default function CourseDetail() {
         </div>
 
         {/* Lessons Section */}
-        <div className="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden">
+        <div className="glow-panel overflow-hidden">
           <div className="p-6 border-b border-gray-200">
             <div className="flex items-center justify-between">
               <h2 className="text-xl font-semibold text-gray-900">
@@ -230,7 +230,7 @@ export default function CourseDetail() {
                 {lessons.map((lesson, index) => (
                   <div
                     key={lesson.id}
-                    className="flex items-center justify-between p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors"
+                    className="flex items-center justify-between p-4 border border-purple-100 rounded-lg hover:bg-purple-50 hover:shadow-glow-purple transition-all"
                   >
                     <div className="flex items-center gap-4">
                       <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center text-purple-600 font-semibold text-sm">

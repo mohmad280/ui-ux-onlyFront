@@ -326,10 +326,10 @@ export default function Home() {
       <Navbar />
 
       {/* Enhanced Hero Section */}
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 glow-bg">
+      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 edu-hero-bg">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           <div className="text-left">
-            <div className="inline-flex items-center gap-2 bg-purple-50 text-purple-800 px-4 py-2 rounded-full text-sm font-medium mb-6">
+            <div className="inline-flex items-center gap-2 bg-white/85 text-purple-800 px-4 py-2 rounded-full text-sm font-medium mb-6 border border-purple-100 shadow-sm">
               <span>🎯</span>
               <span>Learn from industry experts</span>
             </div>
@@ -379,11 +379,11 @@ export default function Home() {
             <div className="orb-wrap">
               <div className="orb-center" />
               <div className="orbit" style={{ animationDuration: '14s' }}>
-                <div className="dot" style={{ top: '4%', left: '50%' }}>✨</div>
-                <div className="dot" style={{ top: '50%', left: '92%' }}>🐍</div>
-                <div className="dot" style={{ top: '92%', left: '50%' }}>⚛️</div>
-                <div className="dot" style={{ top: '50%', left: '8%' }}>☕</div>
-                <div className="dot" style={{ top: '18%', left: '78%' }}>🟨</div>
+                <div className="dot" style={{ top: '4%', left: '50%' }}>JS</div>
+                <div className="dot" style={{ top: '50%', left: '92%' }}>PY</div>
+                <div className="dot" style={{ top: '92%', left: '50%' }}>RE</div>
+                <div className="dot" style={{ top: '50%', left: '8%' }}>JV</div>
+                <div className="dot" style={{ top: '18%', left: '78%' }}>TS</div>
               </div>
             </div>
           </div>
@@ -393,7 +393,7 @@ export default function Home() {
       {/* Featured Courses Section */}
       <section
         id="featured-courses"
-        className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50"
+        className="py-16 px-4 sm:px-6 lg:px-8 glow-bg"
       >
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
@@ -592,7 +592,7 @@ export default function Home() {
             ].map((feature, index) => (
               <div
                 key={index}
-                className="text-center p-8 bg-gray-50 rounded-2xl hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+                className="glow-card text-center p-8"
               >
                 <div className="text-4xl mb-6">{feature.icon}</div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">

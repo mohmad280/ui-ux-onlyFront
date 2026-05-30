@@ -54,10 +54,10 @@ export default function StudentLayout({ children }) {
   };
 
   return (
-    <div className="min-h-screen glow-bg flex">
+    <div className="min-h-screen edu-page-shell flex">
       {/* Enhanced Sidebar - FIXED OVERLAP ISSUE */}
       <div
-        className={`bg-white/95 backdrop-blur-xl w-80 shadow-2xl fixed lg:static h-full transform transition-all duration-500 z-50 border-r border-gray-200/60 flex flex-col ${
+        className={`bg-white/95 backdrop-blur-xl w-80 shadow-2xl fixed lg:static h-full transform transition-all duration-500 z-50 border-r border-purple-100/70 flex flex-col ${
           isSidebarOpen
             ? "translate-x-0 shadow-xl"
             : "-translate-x-full lg:translate-x-0"
@@ -90,7 +90,7 @@ export default function StudentLayout({ children }) {
               className={`group flex items-center gap-4 p-4 rounded-2xl transition-all duration-300 border border-transparent hover:border-purple-200/50 ${
                 location.pathname === item.path
                   ? "bg-gradient-to-r from-purple-50 to-glowPurple/50 shadow-lg shadow-purple-100/50 border-purple-200 text-purple-700"
-                    : "text-gray-600 hover:bg-white hover:shadow-lg hover:text-gray-900"
+                    : "text-gray-600 hover:bg-white hover:shadow-glow-purple hover:text-purple-700"
               }`}
             >
               <span className="text-2xl transition-transform duration-300 group-hover:scale-110">
@@ -147,7 +147,7 @@ export default function StudentLayout({ children }) {
       <div className="flex-1 lg:ml-0 min-w-0 flex flex-col">
         {/* Enhanced Header */}
           <header
-          className={`bg-white/80 backdrop-blur-xl border-b border-gray-200/60 lg:static sticky top-0 z-40 transition-all duration-300 ${
+          className={`bg-white/85 backdrop-blur-xl border-b border-purple-100/70 lg:static sticky top-0 z-40 transition-all duration-300 ${
             scrolled ? "shadow-lg shadow-black/5" : "shadow-sm"
           }`}
         >

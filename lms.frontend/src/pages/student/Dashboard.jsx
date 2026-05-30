@@ -121,7 +121,7 @@ export default function Dashboard() {
     <StudentLayout>
       {/* Enhanced Header Section */}
       <div className="mb-8 text-center lg:text-left">
-        <div className="inline-flex items-center gap-3 px-4 py-2 bg-white/80 rounded-2xl shadow-sm border border-gray-200/60 mb-4">
+        <div className="inline-flex items-center gap-3 px-4 py-2 bg-white/85 rounded-2xl shadow-sm border border-purple-100/70 mb-4">
           <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
           <span className="text-sm text-gray-600">Learning in progress</span>
         </div>
@@ -152,7 +152,7 @@ export default function Dashboard() {
 
       {/* Enhanced Stats Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 mb-8">
-        <div className="group bg-white/80 backdrop-blur-sm rounded-3xl shadow-lg border border-gray-200/60 p-6 hover:shadow-2xl hover:scale-105 transition-all duration-500 hover:border-purple-200">
+        <div className="glow-stat group rounded-3xl">
           <div className="flex items-center justify-between">
             <div>
               <p className="text-sm font-semibold text-gray-500 uppercase tracking-wide">
@@ -169,7 +169,7 @@ export default function Dashboard() {
           </div>
         </div>
 
-        <div className="group bg-white/80 backdrop-blur-sm rounded-3xl shadow-lg border border-gray-200/60 p-6 hover:shadow-2xl hover:scale-105 transition-all duration-500 hover:border-green-200">
+        <div className="glow-stat group rounded-3xl">
           <div className="flex items-center justify-between">
             <div>
               <p className="text-sm font-semibold text-gray-500 uppercase tracking-wide">
@@ -188,7 +188,7 @@ export default function Dashboard() {
           </div>
         </div>
 
-        <div className="group bg-white/80 backdrop-blur-sm rounded-3xl shadow-lg border border-gray-200/60 p-6 hover:shadow-2xl hover:scale-105 transition-all duration-500 hover:border-purple-200">
+        <div className="glow-stat group rounded-3xl">
           <div className="flex flex-col items-center text-center">
             <p className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-4">
               Overall Progress
@@ -202,7 +202,7 @@ export default function Dashboard() {
           </div>
         </div>
 
-        <div className="group bg-white/80 backdrop-blur-sm rounded-3xl shadow-lg border border-gray-200/60 p-6 hover:shadow-2xl hover:scale-105 transition-all duration-500 hover:border-amber-200">
+        <div className="glow-stat group rounded-3xl">
           <div className="flex items-center justify-between">
             <div>
               <p className="text-sm font-semibold text-gray-500 uppercase tracking-wide">
@@ -223,7 +223,7 @@ export default function Dashboard() {
       </div>
 
       {/* Enhanced Continue Learning Section */}
-      <div className="bg-white/80 backdrop-blur-sm rounded-3xl shadow-lg border border-gray-200/60 p-8 mb-8">
+      <div className="glow-panel rounded-3xl p-8 mb-8">
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-8">
           <div>
             <h2 className="text-2xl font-bold text-gray-900 mb-2">
@@ -245,7 +245,7 @@ export default function Dashboard() {
             {recentCourses.map((course, index) => (
               <div
                 key={course.id}
-                className="group bg-gradient-to-br from-white to-gray-50 rounded-2xl shadow-lg border border-gray-200/60 p-6 hover:shadow-2xl hover:scale-105 transition-all duration-500 hover:border-purple-200"
+                className="glow-card group p-6"
               >
                 <div className="w-full h-32 bg-gradient-to-br from-purple-500/20 to-glowPurple/20 rounded-xl mb-4 flex items-center justify-center group-hover:from-purple-500/30 group-hover:to-glowPurple/30 transition-all duration-500">
                   {course.coverImageUrl ? (
@@ -317,7 +317,7 @@ export default function Dashboard() {
 
       {/* Quick Actions Section */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-6 border border-purple-200/60">
+        <div className="glow-card bg-gradient-to-br from-purple-50 to-white p-6">
           <h3 className="font-semibold text-gray-900 mb-2">Need Help?</h3>
           <p className="text-gray-600 text-sm mb-4">
             Get support for your learning journey
@@ -327,7 +327,7 @@ export default function Dashboard() {
           </button>
         </div>
 
-        <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-6 border border-green-200/60">
+        <div className="glow-card bg-gradient-to-br from-purple-50 to-white p-6">
           <h3 className="font-semibold text-gray-900 mb-2">
             Upcoming Deadlines
           </h3>
@@ -337,7 +337,7 @@ export default function Dashboard() {
           </button>
         </div>
 
-        <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-6 border border-purple-200/60">
+        <div className="glow-card bg-gradient-to-br from-purple-50 to-white p-6">
           <h3 className="font-semibold text-gray-900 mb-2">
             Learning Resources
           </h3>
